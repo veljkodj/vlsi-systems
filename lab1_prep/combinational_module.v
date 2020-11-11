@@ -24,12 +24,12 @@ module combinational_module
         if (ctrl == 1'b1)
             if (cntr_ones > cntr_zeroes)
                 data_output <= { {data_input[6 : 3]}  ,{1'b1}, {data_input[2 : 0]}};
-            else // cntr_ones < cntr_zeroes beacause of odd number of bits in data_input signal
+            else // cntr_ones < cntr_zeroes because of odd number of bits in data_input signal
                 data_output <= { {data_input[6 : 3]}  ,{1'b0}, {data_input[2 : 0]}};
         else
             if (cntr_ones > cntr_zeroes)
                 data_output <= { {data_input[6 : 3]}  ,{1'b0}, {data_input[2 : 0]}};
-            else // cntr_ones < cntr_zeroes beacause of odd number of bits in data_input signal
+            else // cntr_ones < cntr_zeroes because of odd number of bits in data_input signal
                 data_output <= { {data_input[6 : 3]}  ,{1'b1}, {data_input[2 : 0]}};
     
     end
