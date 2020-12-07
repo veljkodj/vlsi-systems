@@ -1,0 +1,6 @@
+
+State Machine - |DE0_TOP|my_top:my_top_instance|stopwatch:stopwatch_instance|state_reg
+Name state_reg.00 state_reg.PAUSED state_reg.COUNTING 
+state_reg.00 0 0 0 
+state_reg.COUNTING 1 0 1 
+state_reg.PAUSED 1 1 0 
