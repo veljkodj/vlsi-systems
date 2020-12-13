@@ -6,7 +6,6 @@ module my_top
 	(
 		input async_reset,
 		input clk,
-		input start,
 		input continue_pause,
 		output [(SECONDS_WIDTH - 1) : 0] seconds_passed_led,
 		output [(NUM_OF_7SEGS * 8 - 1) : 0] seconds_passed_7segs
@@ -32,7 +31,6 @@ module my_top
 		(
 			.async_reset(async_reset),
 			.clk(clk),
-			.start(start),
 			.continue_pause(continue_pause_red),
 			.seconds_passed(stopwatch_instance_seconds_passed)
 		);

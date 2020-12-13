@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE0_TOP
-Mon Dec 07 13:06:03 2020
+Sun Dec 13 10:51:23 2020
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -57,15 +57,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Dec 07 13:06:03 2020           ;
+; Analysis & Synthesis Status        ; Successful - Sun Dec 13 10:51:22 2020           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; DE0_TOP                                         ;
 ; Top-level Entity Name              ; DE0_TOP                                         ;
 ; Family                             ; Cyclone III                                     ;
-; Total logic elements               ; 397                                             ;
-;     Total combinational functions  ; 395                                             ;
-;     Dedicated logic registers      ; 42                                              ;
-; Total registers                    ; 42                                              ;
+; Total logic elements               ; 395                                             ;
+;     Total combinational functions  ; 393                                             ;
+;     Dedicated logic registers      ; 41                                              ;
+; Total registers                    ; 41                                              ;
 ; Total pins                         ; 252                                             ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
@@ -207,28 +207,28 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 397            ;
+; Estimated Total logic elements              ; 395            ;
 ;                                             ;                ;
-; Total combinational functions               ; 395            ;
+; Total combinational functions               ; 393            ;
 ; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 74             ;
-;     -- 3 input functions                    ; 89             ;
+;     -- 4 input functions                    ; 71             ;
+;     -- 3 input functions                    ; 90             ;
 ;     -- <=2 input functions                  ; 232            ;
 ;                                             ;                ;
 ; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 256            ;
+;     -- normal mode                          ; 254            ;
 ;     -- arithmetic mode                      ; 139            ;
 ;                                             ;                ;
-; Total registers                             ; 42             ;
-;     -- Dedicated logic registers            ; 42             ;
+; Total registers                             ; 41             ;
+;     -- Dedicated logic registers            ; 41             ;
 ;     -- I/O registers                        ; 0              ;
 ;                                             ;                ;
 ; I/O pins                                    ; 252            ;
 ; Embedded Multiplier 9-bit elements          ; 0              ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 42             ;
-; Total fan-out                               ; 1534           ;
-; Average fan-out                             ; 1.46           ;
+; Maximum fan-out                             ; 41             ;
+; Total fan-out                               ; 1522           ;
+; Average fan-out                             ; 1.45           ;
 +---------------------------------------------+----------------+
 
 
@@ -237,8 +237,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                             ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |DE0_TOP                                  ; 395 (0)           ; 42 (0)       ; 0           ; 0            ; 0       ; 0         ; 252  ; 0            ; |DE0_TOP                                                                                                                        ; work         ;
-;    |my_top:my_top_instance|               ; 395 (24)          ; 42 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TOP|my_top:my_top_instance                                                                                                 ; work         ;
+; |DE0_TOP                                  ; 393 (0)           ; 41 (0)       ; 0           ; 0            ; 0       ; 0         ; 252  ; 0            ; |DE0_TOP                                                                                                                        ; work         ;
+;    |my_top:my_top_instance|               ; 393 (24)          ; 41 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TOP|my_top:my_top_instance                                                                                                 ; work         ;
 ;       |lpm_divide:Div0|                   ; 82 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TOP|my_top:my_top_instance|lpm_divide:Div0                                                                                 ; work         ;
 ;          |lpm_divide_jhm:auto_generated|  ; 82 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TOP|my_top:my_top_instance|lpm_divide:Div0|lpm_divide_jhm:auto_generated                                                   ; work         ;
 ;             |sign_div_unsign_klh:divider| ; 82 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TOP|my_top:my_top_instance|lpm_divide:Div0|lpm_divide_jhm:auto_generated|sign_div_unsign_klh:divider                       ; work         ;
@@ -264,7 +264,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;             |sign_div_unsign_klh:divider| ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TOP|my_top:my_top_instance|lpm_divide:Mod2|lpm_divide_m9m:auto_generated|sign_div_unsign_klh:divider                       ; work         ;
 ;                |alt_u_div_j5f:divider|    ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TOP|my_top:my_top_instance|lpm_divide:Mod2|lpm_divide_m9m:auto_generated|sign_div_unsign_klh:divider|alt_u_div_j5f:divider ; work         ;
 ;       |rising_edge_detector:comb_3|       ; 0 (0)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TOP|my_top:my_top_instance|rising_edge_detector:comb_3                                                                     ; work         ;
-;       |stopwatch:stopwatch_instance|      ; 65 (14)           ; 40 (2)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TOP|my_top:my_top_instance|stopwatch:stopwatch_instance                                                                    ; work         ;
+;       |stopwatch:stopwatch_instance|      ; 63 (12)           ; 39 (1)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TOP|my_top:my_top_instance|stopwatch:stopwatch_instance                                                                    ; work         ;
 ;          |register:cntr|                  ; 41 (41)           ; 28 (28)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TOP|my_top:my_top_instance|stopwatch:stopwatch_instance|register:cntr                                                      ; work         ;
 ;          |register:seconds|               ; 10 (10)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TOP|my_top:my_top_instance|stopwatch:stopwatch_instance|register:seconds                                                   ; work         ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------+--------------+
@@ -283,14 +283,15 @@ Encoding Type:  One-Hot
 +--------------------+--------------+------------------+---------------------------------+
 
 
-+---------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                    ;
-+------------------------------------------------------------------+--------------------+
-; Register name                                                    ; Reason for Removal ;
-+------------------------------------------------------------------+--------------------+
-; my_top:my_top_instance|stopwatch:stopwatch_instance|state_reg.00 ; Lost fanout        ;
-; Total Number of Removed Registers = 1                            ;                    ;
-+------------------------------------------------------------------+--------------------+
++-------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                        ;
++----------------------------------------------------------------------+--------------------+
+; Register name                                                        ; Reason for Removal ;
++----------------------------------------------------------------------+--------------------+
+; my_top:my_top_instance|stopwatch:stopwatch_instance|state_reg.PAUSED ; Lost fanout        ;
+; my_top:my_top_instance|stopwatch:stopwatch_instance|state_reg.00     ; Lost fanout        ;
+; Total Number of Removed Registers = 2                                ;                    ;
++----------------------------------------------------------------------+--------------------+
 
 
 +------------------------------------------------------+
@@ -298,10 +299,10 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 42    ;
+; Total registers                              ; 41    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 42    ;
+; Number of registers using Asynchronous Clear ; 41    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 37    ;
 ; Number of registers using Preset             ; 0     ;
@@ -314,7 +315,6 @@ Encoding Type:  One-Hot
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------+
 ; 4:1                ; 28 bits   ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |DE0_TOP|my_top:my_top_instance|stopwatch:stopwatch_instance|register:cntr|data_reg[13] ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |DE0_TOP|my_top:my_top_instance|stopwatch:stopwatch_instance|Selector2                  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------+
 
 
@@ -544,7 +544,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:07     ;
 +----------------+--------------+
 
 
@@ -554,7 +554,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Dec 07 13:05:57 2020
+    Info: Processing started: Sun Dec 13 10:51:04 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE0_TOP -c DE0_TOP
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file rising_edge_detector.v
@@ -567,7 +567,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file my_top.
     Info (12023): Found entity 1: my_top
 Info (12021): Found 1 design units, including 1 entities, in source file de0_top.v
     Info (12023): Found entity 1: DE0_TOP
-Critical Warning (10846): Verilog HDL Instantiation warning at my_top.v(23): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at my_top.v(22): instance has no name
 Info (12127): Elaborating entity "DE0_TOP" for the top level hierarchy
 Warning (10034): Output port "DRAM_ADDR" at DE0_TOP.v(150) has no driver
 Warning (10034): Output port "FL_ADDR" at DE0_TOP.v(164) has no driver
@@ -602,11 +602,11 @@ Warning (10034): Output port "SD_CLK" at DE0_TOP.v(182) has no driver
 Warning (10034): Output port "VGA_HS" at DE0_TOP.v(190) has no driver
 Warning (10034): Output port "VGA_VS" at DE0_TOP.v(191) has no driver
 Info (12128): Elaborating entity "my_top" for hierarchy "my_top:my_top_instance"
-Warning (10230): Verilog HDL assignment warning at my_top.v(45): truncated value with size 32 to match size of target (4)
-Warning (10270): Verilog HDL Case Statement warning at my_top.v(57): incomplete case statement has no default case item
-Warning (10776): Verilog HDL warning at my_top.v(52): variable sevenseg in static task or function sevenseg may have unintended latch behavior
-Warning (10241): Verilog HDL Function Declaration warning at my_top.v(52): function "sevenseg" may return a Don't Care value because its output register may not be assigned a value in every possible path through the function
-Warning (10030): Net "sevenseg" at my_top.v(52) has no driver or initial value, using a default initial value '0'
+Warning (10230): Verilog HDL assignment warning at my_top.v(43): truncated value with size 32 to match size of target (4)
+Warning (10270): Verilog HDL Case Statement warning at my_top.v(55): incomplete case statement has no default case item
+Warning (10776): Verilog HDL warning at my_top.v(50): variable sevenseg in static task or function sevenseg may have unintended latch behavior
+Warning (10241): Verilog HDL Function Declaration warning at my_top.v(50): function "sevenseg" may return a Don't Care value because its output register may not be assigned a value in every possible path through the function
+Warning (10030): Net "sevenseg" at my_top.v(50) has no driver or initial value, using a default initial value '0'
 Info (12128): Elaborating entity "rising_edge_detector" for hierarchy "my_top:my_top_instance|rising_edge_detector:comb_3"
 Info (12128): Elaborating entity "stopwatch" for hierarchy "my_top:my_top_instance|stopwatch:stopwatch_instance"
 Info (12128): Elaborating entity "register" for hierarchy "my_top:my_top_instance|stopwatch:stopwatch_instance|register:cntr"
@@ -861,7 +861,7 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "GPIO1_CLKOUT[0]" is stuck at GND
     Warning (13410): Pin "GPIO1_CLKOUT[1]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 1 registers lost all their fanouts during netlist optimizations.
+Info (17049): 2 registers lost all their fanouts during netlist optimizations.
 Info (17016): Found the following redundant logic cells in design
     Info (17048): Logic cell "my_top:my_top_instance|lpm_divide:Mod1|lpm_divide_m9m:auto_generated|sign_div_unsign_klh:divider|alt_u_div_j5f:divider|add_sub_9_result_int[0]~0"
     Info (17048): Logic cell "my_top:my_top_instance|lpm_divide:Mod1|lpm_divide_m9m:auto_generated|sign_div_unsign_klh:divider|alt_u_div_j5f:divider|add_sub_6_result_int[0]~10"
@@ -870,8 +870,9 @@ Info (17016): Found the following redundant logic cells in design
     Info (17048): Logic cell "my_top:my_top_instance|lpm_divide:Mod2|lpm_divide_m9m:auto_generated|sign_div_unsign_klh:divider|alt_u_div_j5f:divider|add_sub_9_result_int[0]~0"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 19 input pin(s) that do not drive logic
+Warning (21074): Design contains 20 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "CLOCK_50_2"
+    Warning (15610): No output dependent on input pin "BUTTON[0]"
     Warning (15610): No output dependent on input pin "BUTTON[2]"
     Warning (15610): No output dependent on input pin "SW[0]"
     Warning (15610): No output dependent on input pin "SW[1]"
@@ -890,15 +891,15 @@ Warning (21074): Design contains 19 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "GPIO0_CLKIN[1]"
     Warning (15610): No output dependent on input pin "GPIO1_CLKIN[0]"
     Warning (15610): No output dependent on input pin "GPIO1_CLKIN[1]"
-Info (21057): Implemented 649 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 647 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 23 input pins
     Info (21059): Implemented 118 output pins
     Info (21060): Implemented 111 bidirectional pins
-    Info (21061): Implemented 397 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 252 warnings
+    Info (21061): Implemented 395 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 253 warnings
     Info: Peak virtual memory: 4633 megabytes
-    Info: Processing ended: Mon Dec 07 13:06:03 2020
-    Info: Elapsed time: 00:00:06
+    Info: Processing ended: Sun Dec 13 10:51:23 2020
+    Info: Elapsed time: 00:00:19
     Info: Total CPU time (on all processors): 00:00:05
 
 

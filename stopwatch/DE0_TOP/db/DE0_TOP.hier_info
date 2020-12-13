@@ -1,7 +1,7 @@
 |DE0_TOP
 CLOCK_50 => CLOCK_50.IN1
 CLOCK_50_2 => ~NO_FANOUT~
-BUTTON[0] => BUTTON[0].IN1
+BUTTON[0] => ~NO_FANOUT~
 BUTTON[1] => BUTTON[1].IN1
 BUTTON[2] => ~NO_FANOUT~
 SW[0] => ~NO_FANOUT~
@@ -256,7 +256,6 @@ GPIO1_D[31] <> <UNC>
 |DE0_TOP|my_top:my_top_instance
 async_reset => async_reset.IN2
 clk => clk.IN2
-start => start.IN1
 continue_pause => continue_pause.IN1
 seconds_passed_led[0] <= stopwatch:stopwatch_instance.seconds_passed
 seconds_passed_led[1] <= stopwatch:stopwatch_instance.seconds_passed
@@ -314,10 +313,7 @@ signal_output <= signal_output.DB_MAX_OUTPUT_PORT_TYPE
 |DE0_TOP|my_top:my_top_instance|stopwatch:stopwatch_instance
 async_reset => async_reset.IN2
 clk => clk.IN2
-start => state_next.OUTPUTSELECT
-start => state_next.OUTPUTSELECT
-start => state_next.OUTPUTSELECT
-continue_pause => state_next.OUTPUTSELECT
+continue_pause => state_next.00.OUTPUTSELECT
 continue_pause => state_next.OUTPUTSELECT
 continue_pause => state_next.OUTPUTSELECT
 continue_pause => state_next.OUTPUTSELECT

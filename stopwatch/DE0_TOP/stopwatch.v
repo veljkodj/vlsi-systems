@@ -7,12 +7,11 @@ module stopwatch
 	(
 		input async_reset,
 		input clk,
-		input start,
 		input continue_pause,
 		output reg [(SECONDS_WIDTH - 1) : 0] seconds_passed
 	);
 	
-	localparam one_second = 28'h2FAF080;
+	localparam ONE_SECOND = 28'h2FA_F080;
 	
 	reg [2 : 0] cntr_ctrl;
 	wire [27 : 0] cntr_data_output;
@@ -68,12 +67,12 @@ module stopwatch
 		
 		case (state_reg)
 			WAITING: begin
-				if (start == 1'b1)
+				if (continue_pause == 1'b1)
 					state_next <= COUNTING;
 			end
 			COUNTING: begin
 				cntr_ctrl <= `REG_CTRL_INC;
-				if (cntr_data_output == one_second) begin
+				if (cntr_data_output == ONE_SECOND) begin
 					cntr_ctrl <= `REG_CTRL_CLR;
 					seconds_ctrl <= `REG_CTRL_INC;
 				end

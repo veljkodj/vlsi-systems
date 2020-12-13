@@ -217,7 +217,6 @@ module DE0_TOP
 		(
 			.async_reset(SW[9]),
 			.clk(CLOCK_50),
-			.start(BUTTON[0]),
 			.continue_pause(BUTTON[1]),
 			.seconds_passed_led(LEDG[9 : 0]),
 			.seconds_passed_7segs({HEX3_DP, HEX3_D, HEX2_DP, HEX2_D, HEX1_DP, HEX1_D, HEX0_DP, HEX0_D})
