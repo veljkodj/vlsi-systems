@@ -31,7 +31,7 @@ module my_top
 			.signal_output(ctrl_inc_red)
 		);
 	
-	reg [(`REG_CTRL_WIDTH - 1) : 0] register_instance_ctrl;
+	// reg [(`REG_CTRL_WIDTH - 1) : 0] register_instance_ctrl;
 	wire [7 : 0] register_instance_data_output;
 	
 	register
