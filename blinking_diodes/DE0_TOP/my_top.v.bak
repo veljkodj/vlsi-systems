@@ -62,7 +62,7 @@ module my_top
 		blinking <= 3'b000;
 		
 		for (i = 0; i < 3; i = i + 1) 
-			if (toggle_diode_red[i] == 1'b1) 
+			if (toggle_diode[i] == 1'b1) 
 				diode_next[i] = diode_reg[i] == ACTIVE ? INACTIVE : ACTIVE;
 		
 		if (diode_reg[0] == ACTIVE && cntr_data_output % _250ms == 0)

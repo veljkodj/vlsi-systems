@@ -254,14 +254,41 @@ GPIO1_D[31] <> <UNC>
 
 
 |DE0_TOP|my_top:my_top_instance
-async_reset => async_reset.IN1
-clk => clk.IN1
-toggle_diode[0] => diode_reg[0].ENA
-toggle_diode[1] => diode_reg[1].ENA
-toggle_diode[2] => diode_reg[2].ENA
+async_reset => async_reset.IN4
+clk => clk.IN4
+toggle_diode[0] => toggle_diode[0].IN1
+toggle_diode[1] => toggle_diode[1].IN1
+toggle_diode[2] => toggle_diode[2].IN1
 blinking[0] <= always1.DB_MAX_OUTPUT_PORT_TYPE
 blinking[1] <= always1.DB_MAX_OUTPUT_PORT_TYPE
 blinking[2] <= always1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|rising_edge_detector:block_generate[0].rising_edge_detector_instance
+async_reset => ff2_reg.ACLR
+async_reset => ff1_reg.ACLR
+clk => ff2_reg.CLK
+clk => ff1_reg.CLK
+signal_input => ff1_reg.DATAIN
+signal_output <= signal_output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|rising_edge_detector:block_generate[1].rising_edge_detector_instance
+async_reset => ff2_reg.ACLR
+async_reset => ff1_reg.ACLR
+clk => ff2_reg.CLK
+clk => ff1_reg.CLK
+signal_input => ff1_reg.DATAIN
+signal_output <= signal_output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|rising_edge_detector:block_generate[2].rising_edge_detector_instance
+async_reset => ff2_reg.ACLR
+async_reset => ff1_reg.ACLR
+clk => ff2_reg.CLK
+clk => ff1_reg.CLK
+signal_input => ff1_reg.DATAIN
+signal_output <= signal_output.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |DE0_TOP|my_top:my_top_instance|register:cntr
