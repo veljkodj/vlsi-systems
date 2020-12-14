@@ -210,11 +210,11 @@ module DE0_TOP
 	
 	my_top my_top_instance
 	(
-		.async_reset(SW[9]),
+		.async_reset(SW[9]), // async_reset is active in 0
 		.clk(CLOCK_50),
 		.data_input(SW[7 : 0]),
 		.ctrl_inc(SW[8]),
-		.ctrl_load(BUTTON[2]),
+		.ctrl_load(~BUTTON[2]), // buttons and 7-segment displays are active in 0
 		.data_output_led(LEDG[7 : 0]),
 		.data_output_sevensegs({HEX3_DP, HEX3_D, HEX2_DP, HEX2_D, HEX1_DP, HEX1_D, HEX0_DP, HEX0_D})
 	);
