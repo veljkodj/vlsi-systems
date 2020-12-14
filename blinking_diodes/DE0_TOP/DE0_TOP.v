@@ -212,7 +212,7 @@ module DE0_TOP
 	(
 		.async_reset(SW[9]),
 		.clk(CLOCK_50),
-		.toggle_diode(BUTTON[2 : 0]),
+		.toggle_diode(~BUTTON[2 : 0]),
 		.blinking(LEDG[2 : 0])
 	);
 	
