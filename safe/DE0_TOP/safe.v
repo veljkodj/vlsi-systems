@@ -152,7 +152,7 @@ module safe
 					
 				end
 			
-				seven_seg_output <= 8'hE3;
+				seven_seg_output <= 8'hC7;
 			
 			end
 			

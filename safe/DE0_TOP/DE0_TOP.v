@@ -208,11 +208,15 @@ module DE0_TOP
 	//  Structural coding
 	//=======================================================
 	
+	assign {HEX1_DP, HEX1_D} = 8'hFF;
+	assign {HEX2_DP, HEX2_D} = 8'hFF;
+	assign {HEX3_DP, HEX3_D} = 8'hFF;
+	
 	my_top my_top_instance
 	(
 		.async_reset(SW[9]),
 		.clk(CLOCK_50),
-		.button_push(BUTTON[0]),
+		.button_push(~BUTTON[2]),
 		.digit(SW[3 : 0]),
 		.seven_seg_output({HEX0_DP, HEX0_D})
 	);
