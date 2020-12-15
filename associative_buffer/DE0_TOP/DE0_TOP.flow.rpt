@@ -1,5 +1,5 @@
 Flow report for DE0_TOP
-Tue Dec 15 13:42:40 2020
+Tue Dec 15 14:07:01 2020
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,15 +40,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Tue Dec 15 13:42:40 2020           ;
+; Flow Status                        ; Successful - Tue Dec 15 14:07:01 2020           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; DE0_TOP                                         ;
 ; Top-level Entity Name              ; DE0_TOP                                         ;
 ; Family                             ; Cyclone III                                     ;
 ; Device                             ; EP3C16F484C6                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 900                                             ;
-;     Total combinational functions  ; 833                                             ;
+; Total logic elements               ; 901                                             ;
+;     Total combinational functions  ; 834                                             ;
 ;     Dedicated logic registers      ; 215                                             ;
 ; Total registers                    ; 215                                             ;
 ; Total pins                         ; 252                                             ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/15/2020 13:42:36 ;
+; Start date & time ; 12/15/2020 14:06:58 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; DE0_TOP             ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+-----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                   ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+-----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 70975890919113.160803615602444          ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 70975890919113.160803761801280          ; --            ; --          ; --         ;
 ; ENABLE_ADVANCED_IO_TIMING           ; On                                      ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                      ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                       ; --            ; --          ; --         ;
