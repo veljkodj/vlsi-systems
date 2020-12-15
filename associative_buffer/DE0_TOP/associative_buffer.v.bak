@@ -1,0 +1,142 @@
+`include "register.vh"
+
+module associative_buffer
+	#(
+		parameter KEY_WIDTH = 8,
+		parameter DATA_WIDTH = 8,
+		parameter NUM_DATA_LOG2 = 3
+	)
+	(
+		input async_reset,
+		input clk,
+		input [(`REG_CTRL_WIDTH - 1) : 0] ctrl,
+		input [(DATA_WIDTH - 1) : 0] data_input,
+		input [(KEY_WIDTH - 1) : 0] key_input,
+		output [(DATA_WIDTH - 1) : 0] data_output,
+		output data_valid_output
+	);
+	
+	localparam NUM_DATA = 2 ** NUM_DATA_LOG2;
+	
+	reg [(`REG_CTRL_WIDTH - 1) : 0] valid_ctrl [(NUM_DATA - 1) : 0];
+	reg valid_data_input [(NUM_DATA - 1) : 0];
+	wire valid_data_output [(NUM_DATA - 1) : 0]; 
+	
+	reg [(`REG_CTRL_WIDTH - 1) : 0] key_ctrl [(NUM_DATA - 1) : 0];
+	wire [(KEY_WIDTH - 1) : 0] key_data_output [(NUM_DATA - 1) : 0];
+	
+	reg [(`REG_CTRL_WIDTH - 1) : 0] data_ctrl [(NUM_DATA - 1) : 0];
+	wire [(DATA_WIDTH - 1) : 0] data_data_output [(NUM_DATA - 1) : 0];
+	
+	wire [(NUM_DATA - 1) : 0] keys_compare_res;
+	
+	genvar i;
+	generate 
+		for (i = 0; i < NUM_DATA; i = i + 1) begin: generate_associative_buffer_block
+		
+			register
+			#(
+				.WIDTH(1)
+			)
+			valid
+			(
+				.async_reset(async_reset),
+				.clk(clk),
+				.ctrl(valid_ctrl[i]),
+				.data_input(valid_data_input[i]),
+				.data_output(valid_data_output[i])
+			);
+			
+			register
+			#(
+				.WIDTH(KEY_WIDTH)
+			)
+			key
+			(
+				.async_reset(async_reset),
+				.clk(clk),
+				.ctrl(key_ctrl[i]),
+				.data_input(key_input),
+				.data_output(key_data_output[i])
+			);
+			
+			assign keys_compare_res[i] = key_data_output[i] == key_input;
+			
+			register
+			#(
+				.WIDTH(DATA_WIDTH)
+			)
+			data
+			(
+				.async_reset(async_reset),
+				.clk(clk),
+				.ctrl(data_ctrl[i]),
+				.data_input(data_input),
+				.data_output(data_data_output[i])
+			);
+		
+		end
+	endgenerate
+	
+	reg hit_occured;
+	reg [(NUM_DATA_LOG2 - 1) : 0] hit_index;
+	
+	always @(*) begin
+		integer i;
+		
+		/*default values*/
+		for (i = 0; i < NUM_DATA; i = i + 1) begin
+			valid_data_input[i] <= 1'b0;
+			valid_ctrl[i] <= `REG_CTRL_NOP;
+			key_ctrl[i] <= `REG_CTRL_NOP;
+			data_ctrl[i] <= `REG_CTRL_NOP;
+		end
+		/*default values*/
+	
+		/* output */
+		data_output <= {DATA_WIDTH{1'b0}};
+		data_valid_output <= 1'b0;
+		/* output */
+	
+		hit_occured = 0;
+		hit_index = {NUM_DATA_LOG2{1'b0}};
+		begin: check_if_hit_occured
+		for (i = 0; i < NUM_DATA; i = i + 1) begin
+			if (keys_compare_res[i] == 1'b1 && valid_data_output[i] == 1'b1) begin
+				hit_occured = 1;
+				hit_index = i[(NUM_DATA_LOG2 - 1) : 0];
+				disable check_if_hit_occured;
+			end
+		end
+		end
+	
+		if (hit_occured == 1'b1) begin
+			data_ctrl[hit_index] <= ctrl;
+			data_output <= data[hit_index];
+			data_valid_output <= 1'b1;
+		end else begin // hit_occured == 1'b0
+		
+			available_found = 0;
+			available_index = {NUM_DATA_LOG2{1'b0}};
+			begin: look_for_available
+			for (i = 0; i < NUM_DATA; i = i + 1) begin
+				if (valid_data_output[i] == 1'b0) begin
+					available_found = 1;
+					available_index = i[(NUM_DATA_LOG2 - 1) : 0];
+					disable look_for_available;
+				end
+			end
+			end
+			
+			if (available_found == 1) begin
+				valid_data_input[available_index] <= 1'b1;
+				valid_ctrl[available_index] <= `REG_CTRL_LD;
+				key_ctrl[available_index] <= `REG_CTRL_LD;
+				data_ctrl[available_index] <= ctrl;
+			end
+			
+		end
+		
+	end
+	
+endmodule

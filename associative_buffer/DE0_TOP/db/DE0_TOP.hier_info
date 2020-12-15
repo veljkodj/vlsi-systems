@@ -1,0 +1,2080 @@
+|DE0_TOP
+CLOCK_50 => CLOCK_50.IN1
+CLOCK_50_2 => ~NO_FANOUT~
+BUTTON[0] => _.IN1
+BUTTON[1] => _.IN1
+BUTTON[2] => _.IN1
+SW[0] => SW[0].IN1
+SW[1] => SW[1].IN1
+SW[2] => SW[2].IN1
+SW[3] => SW[3].IN1
+SW[4] => SW[4].IN1
+SW[5] => SW[5].IN1
+SW[6] => ~NO_FANOUT~
+SW[7] => ~NO_FANOUT~
+SW[8] => SW[8].IN1
+SW[9] => SW[9].IN1
+HEX0_D[0] <= <GND>
+HEX0_D[1] <= <GND>
+HEX0_D[2] <= <GND>
+HEX0_D[3] <= <GND>
+HEX0_D[4] <= <GND>
+HEX0_D[5] <= <GND>
+HEX0_D[6] <= <GND>
+HEX0_DP <= <GND>
+HEX1_D[0] <= <GND>
+HEX1_D[1] <= <GND>
+HEX1_D[2] <= <GND>
+HEX1_D[3] <= <GND>
+HEX1_D[4] <= <GND>
+HEX1_D[5] <= <GND>
+HEX1_D[6] <= <GND>
+HEX1_DP <= <GND>
+HEX2_D[0] <= <GND>
+HEX2_D[1] <= <GND>
+HEX2_D[2] <= <GND>
+HEX2_D[3] <= <GND>
+HEX2_D[4] <= <GND>
+HEX2_D[5] <= <GND>
+HEX2_D[6] <= <GND>
+HEX2_DP <= <GND>
+HEX3_D[0] <= <GND>
+HEX3_D[1] <= <GND>
+HEX3_D[2] <= <GND>
+HEX3_D[3] <= <GND>
+HEX3_D[4] <= <GND>
+HEX3_D[5] <= <GND>
+HEX3_D[6] <= <GND>
+HEX3_DP <= <GND>
+LEDG[0] <= my_top:my_top_instance.data_output
+LEDG[1] <= my_top:my_top_instance.data_output
+LEDG[2] <= my_top:my_top_instance.data_output
+LEDG[3] <= <GND>
+LEDG[4] <= <GND>
+LEDG[5] <= <GND>
+LEDG[6] <= <GND>
+LEDG[7] <= <GND>
+LEDG[8] <= <GND>
+LEDG[9] <= my_top:my_top_instance.data_valid
+UART_TXD <= <GND>
+UART_RXD => ~NO_FANOUT~
+UART_CTS <= <GND>
+UART_RTS => ~NO_FANOUT~
+DRAM_DQ[0] <> <UNC>
+DRAM_DQ[1] <> <UNC>
+DRAM_DQ[2] <> <UNC>
+DRAM_DQ[3] <> <UNC>
+DRAM_DQ[4] <> <UNC>
+DRAM_DQ[5] <> <UNC>
+DRAM_DQ[6] <> <UNC>
+DRAM_DQ[7] <> <UNC>
+DRAM_DQ[8] <> <UNC>
+DRAM_DQ[9] <> <UNC>
+DRAM_DQ[10] <> <UNC>
+DRAM_DQ[11] <> <UNC>
+DRAM_DQ[12] <> <UNC>
+DRAM_DQ[13] <> <UNC>
+DRAM_DQ[14] <> <UNC>
+DRAM_DQ[15] <> <UNC>
+DRAM_ADDR[0] <= <GND>
+DRAM_ADDR[1] <= <GND>
+DRAM_ADDR[2] <= <GND>
+DRAM_ADDR[3] <= <GND>
+DRAM_ADDR[4] <= <GND>
+DRAM_ADDR[5] <= <GND>
+DRAM_ADDR[6] <= <GND>
+DRAM_ADDR[7] <= <GND>
+DRAM_ADDR[8] <= <GND>
+DRAM_ADDR[9] <= <GND>
+DRAM_ADDR[10] <= <GND>
+DRAM_ADDR[11] <= <GND>
+DRAM_ADDR[12] <= <GND>
+DRAM_LDQM <= <GND>
+DRAM_UDQM <= <GND>
+DRAM_WE_N <= <GND>
+DRAM_CAS_N <= <GND>
+DRAM_RAS_N <= <GND>
+DRAM_CS_N <= <GND>
+DRAM_BA_0 <= <GND>
+DRAM_BA_1 <= <GND>
+DRAM_CLK <= <GND>
+DRAM_CKE <= <GND>
+FL_DQ[0] <> <UNC>
+FL_DQ[1] <> <UNC>
+FL_DQ[2] <> <UNC>
+FL_DQ[3] <> <UNC>
+FL_DQ[4] <> <UNC>
+FL_DQ[5] <> <UNC>
+FL_DQ[6] <> <UNC>
+FL_DQ[7] <> <UNC>
+FL_DQ[8] <> <UNC>
+FL_DQ[9] <> <UNC>
+FL_DQ[10] <> <UNC>
+FL_DQ[11] <> <UNC>
+FL_DQ[12] <> <UNC>
+FL_DQ[13] <> <UNC>
+FL_DQ[14] <> <UNC>
+FL_DQ15_AM1 <> <UNC>
+FL_ADDR[0] <= <GND>
+FL_ADDR[1] <= <GND>
+FL_ADDR[2] <= <GND>
+FL_ADDR[3] <= <GND>
+FL_ADDR[4] <= <GND>
+FL_ADDR[5] <= <GND>
+FL_ADDR[6] <= <GND>
+FL_ADDR[7] <= <GND>
+FL_ADDR[8] <= <GND>
+FL_ADDR[9] <= <GND>
+FL_ADDR[10] <= <GND>
+FL_ADDR[11] <= <GND>
+FL_ADDR[12] <= <GND>
+FL_ADDR[13] <= <GND>
+FL_ADDR[14] <= <GND>
+FL_ADDR[15] <= <GND>
+FL_ADDR[16] <= <GND>
+FL_ADDR[17] <= <GND>
+FL_ADDR[18] <= <GND>
+FL_ADDR[19] <= <GND>
+FL_ADDR[20] <= <GND>
+FL_ADDR[21] <= <GND>
+FL_WE_N <= <GND>
+FL_RST_N <= <GND>
+FL_OE_N <= <GND>
+FL_CE_N <= <GND>
+FL_WP_N <= <GND>
+FL_BYTE_N <= <GND>
+FL_RY => ~NO_FANOUT~
+LCD_BLON <= <GND>
+LCD_RW <= <GND>
+LCD_EN <= <GND>
+LCD_RS <= <GND>
+LCD_DATA[0] <> <UNC>
+LCD_DATA[1] <> <UNC>
+LCD_DATA[2] <> <UNC>
+LCD_DATA[3] <> <UNC>
+LCD_DATA[4] <> <UNC>
+LCD_DATA[5] <> <UNC>
+LCD_DATA[6] <> <UNC>
+LCD_DATA[7] <> <UNC>
+SD_DAT0 <> <UNC>
+SD_DAT3 <> <UNC>
+SD_CMD <> <UNC>
+SD_CLK <= <GND>
+SD_WP_N => ~NO_FANOUT~
+PS2_KBDAT <> <UNC>
+PS2_KBCLK <> <UNC>
+PS2_MSDAT <> <UNC>
+PS2_MSCLK <> <UNC>
+VGA_HS <= <GND>
+VGA_VS <= <GND>
+VGA_R[0] <= <GND>
+VGA_R[1] <= <GND>
+VGA_R[2] <= <GND>
+VGA_R[3] <= <GND>
+VGA_G[0] <= <GND>
+VGA_G[1] <= <GND>
+VGA_G[2] <= <GND>
+VGA_G[3] <= <GND>
+VGA_B[0] <= <GND>
+VGA_B[1] <= <GND>
+VGA_B[2] <= <GND>
+VGA_B[3] <= <GND>
+GPIO0_CLKIN[0] => ~NO_FANOUT~
+GPIO0_CLKIN[1] => ~NO_FANOUT~
+GPIO0_CLKOUT[0] <= <GND>
+GPIO0_CLKOUT[1] <= <GND>
+GPIO0_D[0] <> <UNC>
+GPIO0_D[1] <> <UNC>
+GPIO0_D[2] <> <UNC>
+GPIO0_D[3] <> <UNC>
+GPIO0_D[4] <> <UNC>
+GPIO0_D[5] <> <UNC>
+GPIO0_D[6] <> <UNC>
+GPIO0_D[7] <> <UNC>
+GPIO0_D[8] <> <UNC>
+GPIO0_D[9] <> <UNC>
+GPIO0_D[10] <> <UNC>
+GPIO0_D[11] <> <UNC>
+GPIO0_D[12] <> <UNC>
+GPIO0_D[13] <> <UNC>
+GPIO0_D[14] <> <UNC>
+GPIO0_D[15] <> <UNC>
+GPIO0_D[16] <> <UNC>
+GPIO0_D[17] <> <UNC>
+GPIO0_D[18] <> <UNC>
+GPIO0_D[19] <> <UNC>
+GPIO0_D[20] <> <UNC>
+GPIO0_D[21] <> <UNC>
+GPIO0_D[22] <> <UNC>
+GPIO0_D[23] <> <UNC>
+GPIO0_D[24] <> <UNC>
+GPIO0_D[25] <> <UNC>
+GPIO0_D[26] <> <UNC>
+GPIO0_D[27] <> <UNC>
+GPIO0_D[28] <> <UNC>
+GPIO0_D[29] <> <UNC>
+GPIO0_D[30] <> <UNC>
+GPIO0_D[31] <> <UNC>
+GPIO1_CLKIN[0] => ~NO_FANOUT~
+GPIO1_CLKIN[1] => ~NO_FANOUT~
+GPIO1_CLKOUT[0] <= <GND>
+GPIO1_CLKOUT[1] <= <GND>
+GPIO1_D[0] <> <UNC>
+GPIO1_D[1] <> <UNC>
+GPIO1_D[2] <> <UNC>
+GPIO1_D[3] <> <UNC>
+GPIO1_D[4] <> <UNC>
+GPIO1_D[5] <> <UNC>
+GPIO1_D[6] <> <UNC>
+GPIO1_D[7] <> <UNC>
+GPIO1_D[8] <> <UNC>
+GPIO1_D[9] <> <UNC>
+GPIO1_D[10] <> <UNC>
+GPIO1_D[11] <> <UNC>
+GPIO1_D[12] <> <UNC>
+GPIO1_D[13] <> <UNC>
+GPIO1_D[14] <> <UNC>
+GPIO1_D[15] <> <UNC>
+GPIO1_D[16] <> <UNC>
+GPIO1_D[17] <> <UNC>
+GPIO1_D[18] <> <UNC>
+GPIO1_D[19] <> <UNC>
+GPIO1_D[20] <> <UNC>
+GPIO1_D[21] <> <UNC>
+GPIO1_D[22] <> <UNC>
+GPIO1_D[23] <> <UNC>
+GPIO1_D[24] <> <UNC>
+GPIO1_D[25] <> <UNC>
+GPIO1_D[26] <> <UNC>
+GPIO1_D[27] <> <UNC>
+GPIO1_D[28] <> <UNC>
+GPIO1_D[29] <> <UNC>
+GPIO1_D[30] <> <UNC>
+GPIO1_D[31] <> <UNC>
+
+
+|DE0_TOP|my_top:my_top_instance
+clk => clk.IN4
+async_reset => async_reset.IN4
+ctrl_input[0] => ctrl_input[0].IN1
+ctrl_input[1] => ctrl_input[1].IN1
+ctrl_input[2] => ctrl_input[2].IN1
+key_input[0] => key_input[0].IN1
+key_input[1] => key_input[1].IN1
+key_input[2] => key_input[2].IN1
+data_input[0] => data_input[0].IN1
+data_input[1] => data_input[1].IN1
+data_input[2] => data_input[2].IN1
+data_output[0] <= associative_buffer:associative_buffer_instance.data_output
+data_output[1] <= associative_buffer:associative_buffer_instance.data_output
+data_output[2] <= associative_buffer:associative_buffer_instance.data_output
+data_valid <= associative_buffer:associative_buffer_instance.data_valid_output
+trigger_display => trigger_display.IN1
+
+
+|DE0_TOP|my_top:my_top_instance|edge_detector:generate_edge_detectors_block[0].edge_detector_instance
+async_reset => ff2_reg.ACLR
+async_reset => ff1_reg.ACLR
+clk => ff2_reg.CLK
+clk => ff1_reg.CLK
+signal_input => ff1_reg.DATAIN
+signal_output <= signal_output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|edge_detector:generate_edge_detectors_block[1].edge_detector_instance
+async_reset => ff2_reg.ACLR
+async_reset => ff1_reg.ACLR
+clk => ff2_reg.CLK
+clk => ff1_reg.CLK
+signal_input => ff1_reg.DATAIN
+signal_output <= signal_output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|edge_detector:generate_edge_detectors_block[2].edge_detector_instance
+async_reset => ff2_reg.ACLR
+async_reset => ff1_reg.ACLR
+clk => ff2_reg.CLK
+clk => ff1_reg.CLK
+signal_input => ff1_reg.DATAIN
+signal_output <= signal_output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|associative_buffer:associative_buffer_instance
+async_reset => async_reset.IN66
+clk => clk.IN66
+ctrl[0] => data_ctrl.DATAB
+ctrl[0] => data_ctrl.DATAB
+ctrl[0] => data_ctrl.DATAB
+ctrl[0] => data_ctrl.DATAB
+ctrl[0] => data_ctrl.DATAB
+ctrl[0] => data_ctrl.DATAB
+ctrl[0] => data_ctrl.DATAB
+ctrl[0] => data_ctrl.DATAB
+ctrl[0] => data_ctrl.DATAB
+ctrl[0] => data_ctrl.DATAB
+ctrl[0] => data_ctrl.DATAB
+ctrl[0] => data_ctrl.DATAB
+ctrl[0] => data_ctrl.DATAB
+ctrl[0] => data_ctrl.DATAB
+ctrl[0] => data_ctrl.DATAB
+ctrl[0] => data_ctrl.DATAB
+ctrl[0] => data_ctrl.DATAB
+ctrl[0] => data_ctrl.DATAB
+ctrl[0] => data_ctrl.DATAB
+ctrl[0] => data_ctrl.DATAB
+ctrl[0] => data_ctrl.DATAB
+ctrl[0] => data_ctrl.DATAB
+ctrl[0] => data_ctrl.DATAB
+ctrl[0] => data_ctrl.DATAB
+ctrl[0] => data_ctrl.DATAB
+ctrl[0] => data_ctrl.DATAB
+ctrl[0] => data_ctrl.DATAB
+ctrl[0] => data_ctrl.DATAB
+ctrl[0] => data_ctrl.DATAB
+ctrl[0] => data_ctrl.DATAB
+ctrl[0] => data_ctrl.DATAB
+ctrl[0] => data_ctrl.DATAB
+ctrl[0] => Equal16.IN2
+ctrl[0] => Equal33.IN2
+ctrl[1] => data_ctrl.DATAB
+ctrl[1] => data_ctrl.DATAB
+ctrl[1] => data_ctrl.DATAB
+ctrl[1] => data_ctrl.DATAB
+ctrl[1] => data_ctrl.DATAB
+ctrl[1] => data_ctrl.DATAB
+ctrl[1] => data_ctrl.DATAB
+ctrl[1] => data_ctrl.DATAB
+ctrl[1] => data_ctrl.DATAB
+ctrl[1] => data_ctrl.DATAB
+ctrl[1] => data_ctrl.DATAB
+ctrl[1] => data_ctrl.DATAB
+ctrl[1] => data_ctrl.DATAB
+ctrl[1] => data_ctrl.DATAB
+ctrl[1] => data_ctrl.DATAB
+ctrl[1] => data_ctrl.DATAB
+ctrl[1] => data_ctrl.DATAB
+ctrl[1] => data_ctrl.DATAB
+ctrl[1] => data_ctrl.DATAB
+ctrl[1] => data_ctrl.DATAB
+ctrl[1] => data_ctrl.DATAB
+ctrl[1] => data_ctrl.DATAB
+ctrl[1] => data_ctrl.DATAB
+ctrl[1] => data_ctrl.DATAB
+ctrl[1] => data_ctrl.DATAB
+ctrl[1] => data_ctrl.DATAB
+ctrl[1] => data_ctrl.DATAB
+ctrl[1] => data_ctrl.DATAB
+ctrl[1] => data_ctrl.DATAB
+ctrl[1] => data_ctrl.DATAB
+ctrl[1] => data_ctrl.DATAB
+ctrl[1] => data_ctrl.DATAB
+ctrl[1] => Equal16.IN1
+ctrl[1] => Equal33.IN1
+ctrl[2] => data_ctrl.DATAB
+ctrl[2] => data_ctrl.DATAB
+ctrl[2] => data_ctrl.DATAB
+ctrl[2] => data_ctrl.DATAB
+ctrl[2] => data_ctrl.DATAB
+ctrl[2] => data_ctrl.DATAB
+ctrl[2] => data_ctrl.DATAB
+ctrl[2] => data_ctrl.DATAB
+ctrl[2] => data_ctrl.DATAB
+ctrl[2] => data_ctrl.DATAB
+ctrl[2] => data_ctrl.DATAB
+ctrl[2] => data_ctrl.DATAB
+ctrl[2] => data_ctrl.DATAB
+ctrl[2] => data_ctrl.DATAB
+ctrl[2] => data_ctrl.DATAB
+ctrl[2] => data_ctrl.DATAB
+ctrl[2] => data_ctrl.DATAB
+ctrl[2] => data_ctrl.DATAB
+ctrl[2] => data_ctrl.DATAB
+ctrl[2] => data_ctrl.DATAB
+ctrl[2] => data_ctrl.DATAB
+ctrl[2] => data_ctrl.DATAB
+ctrl[2] => data_ctrl.DATAB
+ctrl[2] => data_ctrl.DATAB
+ctrl[2] => data_ctrl.DATAB
+ctrl[2] => data_ctrl.DATAB
+ctrl[2] => data_ctrl.DATAB
+ctrl[2] => data_ctrl.DATAB
+ctrl[2] => data_ctrl.DATAB
+ctrl[2] => data_ctrl.DATAB
+ctrl[2] => data_ctrl.DATAB
+ctrl[2] => data_ctrl.DATAB
+ctrl[2] => Equal16.IN0
+ctrl[2] => Equal33.IN0
+data_input[0] => data_input[0].IN16
+data_input[1] => data_input[1].IN16
+data_input[2] => data_input[2].IN16
+key_input[0] => key_input[0].IN16
+key_input[1] => key_input[1].IN16
+key_input[2] => key_input[2].IN16
+trigger_read => last_read_index_data_input.OUTPUTSELECT
+trigger_read => last_read_index_data_input.OUTPUTSELECT
+trigger_read => last_read_index_data_input.OUTPUTSELECT
+trigger_read => last_read_index_data_input.OUTPUTSELECT
+trigger_read => last_read_index_ctrl.OUTPUTSELECT
+trigger_read => timer_ctrl.OUTPUTSELECT
+trigger_read => timer_ctrl.OUTPUTSELECT
+trigger_read => state_next.OUTPUTSELECT
+data_output[0] <= data_output.DB_MAX_OUTPUT_PORT_TYPE
+data_output[1] <= data_output.DB_MAX_OUTPUT_PORT_TYPE
+data_output[2] <= data_output.DB_MAX_OUTPUT_PORT_TYPE
+data_valid_output <= data_valid_output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|associative_buffer:associative_buffer_instance|register:generate_associative_buffer_block[0].valid
+async_reset => data_reg[0].ACLR
+clk => data_reg[0].CLK
+ctrl[0] => Mux0.IN5
+ctrl[1] => Mux0.IN4
+ctrl[2] => Mux0.IN3
+data_input[0] => Mux0.IN6
+data_output[0] <= data_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|associative_buffer:associative_buffer_instance|register:generate_associative_buffer_block[0].key
+async_reset => data_reg[0].ACLR
+async_reset => data_reg[1].ACLR
+async_reset => data_reg[2].ACLR
+clk => data_reg[0].CLK
+clk => data_reg[1].CLK
+clk => data_reg[2].CLK
+ctrl[0] => Mux0.IN5
+ctrl[0] => Mux1.IN5
+ctrl[0] => Mux2.IN5
+ctrl[1] => Mux0.IN4
+ctrl[1] => Mux1.IN4
+ctrl[1] => Mux2.IN4
+ctrl[2] => Mux0.IN3
+ctrl[2] => Mux1.IN3
+ctrl[2] => Mux2.IN3
+data_input[0] => Mux2.IN6
+data_input[1] => Mux1.IN6
+data_input[2] => Mux0.IN6
+data_output[0] <= data_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+data_output[1] <= data_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+data_output[2] <= data_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|associative_buffer:associative_buffer_instance|register:generate_associative_buffer_block[0].data
+async_reset => data_reg[0].ACLR
+async_reset => data_reg[1].ACLR
+async_reset => data_reg[2].ACLR
+clk => data_reg[0].CLK
+clk => data_reg[1].CLK
+clk => data_reg[2].CLK
+ctrl[0] => Mux0.IN5
+ctrl[0] => Mux1.IN5
+ctrl[0] => Mux2.IN5
+ctrl[1] => Mux0.IN4
+ctrl[1] => Mux1.IN4
+ctrl[1] => Mux2.IN4
+ctrl[2] => Mux0.IN3
+ctrl[2] => Mux1.IN3
+ctrl[2] => Mux2.IN3
+data_input[0] => Mux2.IN6
+data_input[1] => Mux1.IN6
+data_input[2] => Mux0.IN6
+data_output[0] <= data_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+data_output[1] <= data_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+data_output[2] <= data_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|associative_buffer:associative_buffer_instance|register:generate_associative_buffer_block[0].lru
+async_reset => data_reg[0].ACLR
+async_reset => data_reg[1].ACLR
+async_reset => data_reg[2].ACLR
+async_reset => data_reg[3].ACLR
+clk => data_reg[0].CLK
+clk => data_reg[1].CLK
+clk => data_reg[2].CLK
+clk => data_reg[3].CLK
+ctrl[0] => Mux0.IN5
+ctrl[0] => Mux1.IN5
+ctrl[0] => Mux2.IN5
+ctrl[0] => Mux3.IN5
+ctrl[1] => Mux0.IN4
+ctrl[1] => Mux1.IN4
+ctrl[1] => Mux2.IN4
+ctrl[1] => Mux3.IN4
+ctrl[2] => Mux0.IN3
+ctrl[2] => Mux1.IN3
+ctrl[2] => Mux2.IN3
+ctrl[2] => Mux3.IN3
+data_input[0] => Mux3.IN6
+data_input[1] => Mux2.IN6
+data_input[2] => Mux1.IN6
+data_input[3] => Mux0.IN6
+data_output[0] <= data_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+data_output[1] <= data_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+data_output[2] <= data_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+data_output[3] <= data_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|associative_buffer:associative_buffer_instance|register:generate_associative_buffer_block[1].valid
+async_reset => data_reg[0].ACLR
+clk => data_reg[0].CLK
+ctrl[0] => Mux0.IN5
+ctrl[1] => Mux0.IN4
+ctrl[2] => Mux0.IN3
+data_input[0] => Mux0.IN6
+data_output[0] <= data_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|associative_buffer:associative_buffer_instance|register:generate_associative_buffer_block[1].key
+async_reset => data_reg[0].ACLR
+async_reset => data_reg[1].ACLR
+async_reset => data_reg[2].ACLR
+clk => data_reg[0].CLK
+clk => data_reg[1].CLK
+clk => data_reg[2].CLK
+ctrl[0] => Mux0.IN5
+ctrl[0] => Mux1.IN5
+ctrl[0] => Mux2.IN5
+ctrl[1] => Mux0.IN4
+ctrl[1] => Mux1.IN4
+ctrl[1] => Mux2.IN4
+ctrl[2] => Mux0.IN3
+ctrl[2] => Mux1.IN3
+ctrl[2] => Mux2.IN3
+data_input[0] => Mux2.IN6
+data_input[1] => Mux1.IN6
+data_input[2] => Mux0.IN6
+data_output[0] <= data_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+data_output[1] <= data_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+data_output[2] <= data_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|associative_buffer:associative_buffer_instance|register:generate_associative_buffer_block[1].data
+async_reset => data_reg[0].ACLR
+async_reset => data_reg[1].ACLR
+async_reset => data_reg[2].ACLR
+clk => data_reg[0].CLK
+clk => data_reg[1].CLK
+clk => data_reg[2].CLK
+ctrl[0] => Mux0.IN5
+ctrl[0] => Mux1.IN5
+ctrl[0] => Mux2.IN5
+ctrl[1] => Mux0.IN4
+ctrl[1] => Mux1.IN4
+ctrl[1] => Mux2.IN4
+ctrl[2] => Mux0.IN3
+ctrl[2] => Mux1.IN3
+ctrl[2] => Mux2.IN3
+data_input[0] => Mux2.IN6
+data_input[1] => Mux1.IN6
+data_input[2] => Mux0.IN6
+data_output[0] <= data_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+data_output[1] <= data_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+data_output[2] <= data_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|associative_buffer:associative_buffer_instance|register:generate_associative_buffer_block[1].lru
+async_reset => data_reg[0].ACLR
+async_reset => data_reg[1].ACLR
+async_reset => data_reg[2].ACLR
+async_reset => data_reg[3].ACLR
+clk => data_reg[0].CLK
+clk => data_reg[1].CLK
+clk => data_reg[2].CLK
+clk => data_reg[3].CLK
+ctrl[0] => Mux0.IN5
+ctrl[0] => Mux1.IN5
+ctrl[0] => Mux2.IN5
+ctrl[0] => Mux3.IN5
+ctrl[1] => Mux0.IN4
+ctrl[1] => Mux1.IN4
+ctrl[1] => Mux2.IN4
+ctrl[1] => Mux3.IN4
+ctrl[2] => Mux0.IN3
+ctrl[2] => Mux1.IN3
+ctrl[2] => Mux2.IN3
+ctrl[2] => Mux3.IN3
+data_input[0] => Mux3.IN6
+data_input[1] => Mux2.IN6
+data_input[2] => Mux1.IN6
+data_input[3] => Mux0.IN6
+data_output[0] <= data_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+data_output[1] <= data_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+data_output[2] <= data_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+data_output[3] <= data_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|associative_buffer:associative_buffer_instance|register:generate_associative_buffer_block[2].valid
+async_reset => data_reg[0].ACLR
+clk => data_reg[0].CLK
+ctrl[0] => Mux0.IN5
+ctrl[1] => Mux0.IN4
+ctrl[2] => Mux0.IN3
+data_input[0] => Mux0.IN6
+data_output[0] <= data_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|associative_buffer:associative_buffer_instance|register:generate_associative_buffer_block[2].key
+async_reset => data_reg[0].ACLR
+async_reset => data_reg[1].ACLR
+async_reset => data_reg[2].ACLR
+clk => data_reg[0].CLK
+clk => data_reg[1].CLK
+clk => data_reg[2].CLK
+ctrl[0] => Mux0.IN5
+ctrl[0] => Mux1.IN5
+ctrl[0] => Mux2.IN5
+ctrl[1] => Mux0.IN4
+ctrl[1] => Mux1.IN4
+ctrl[1] => Mux2.IN4
+ctrl[2] => Mux0.IN3
+ctrl[2] => Mux1.IN3
+ctrl[2] => Mux2.IN3
+data_input[0] => Mux2.IN6
+data_input[1] => Mux1.IN6
+data_input[2] => Mux0.IN6
+data_output[0] <= data_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+data_output[1] <= data_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+data_output[2] <= data_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|associative_buffer:associative_buffer_instance|register:generate_associative_buffer_block[2].data
+async_reset => data_reg[0].ACLR
+async_reset => data_reg[1].ACLR
+async_reset => data_reg[2].ACLR
+clk => data_reg[0].CLK
+clk => data_reg[1].CLK
+clk => data_reg[2].CLK
+ctrl[0] => Mux0.IN5
+ctrl[0] => Mux1.IN5
+ctrl[0] => Mux2.IN5
+ctrl[1] => Mux0.IN4
+ctrl[1] => Mux1.IN4
+ctrl[1] => Mux2.IN4
+ctrl[2] => Mux0.IN3
+ctrl[2] => Mux1.IN3
+ctrl[2] => Mux2.IN3
+data_input[0] => Mux2.IN6
+data_input[1] => Mux1.IN6
+data_input[2] => Mux0.IN6
+data_output[0] <= data_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+data_output[1] <= data_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+data_output[2] <= data_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|associative_buffer:associative_buffer_instance|register:generate_associative_buffer_block[2].lru
+async_reset => data_reg[0].ACLR
+async_reset => data_reg[1].ACLR
+async_reset => data_reg[2].ACLR
+async_reset => data_reg[3].ACLR
+clk => data_reg[0].CLK
+clk => data_reg[1].CLK
+clk => data_reg[2].CLK
+clk => data_reg[3].CLK
+ctrl[0] => Mux0.IN5
+ctrl[0] => Mux1.IN5
+ctrl[0] => Mux2.IN5
+ctrl[0] => Mux3.IN5
+ctrl[1] => Mux0.IN4
+ctrl[1] => Mux1.IN4
+ctrl[1] => Mux2.IN4
+ctrl[1] => Mux3.IN4
+ctrl[2] => Mux0.IN3
+ctrl[2] => Mux1.IN3
+ctrl[2] => Mux2.IN3
+ctrl[2] => Mux3.IN3
+data_input[0] => Mux3.IN6
+data_input[1] => Mux2.IN6
+data_input[2] => Mux1.IN6
+data_input[3] => Mux0.IN6
+data_output[0] <= data_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+data_output[1] <= data_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+data_output[2] <= data_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+data_output[3] <= data_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|associative_buffer:associative_buffer_instance|register:generate_associative_buffer_block[3].valid
+async_reset => data_reg[0].ACLR
+clk => data_reg[0].CLK
+ctrl[0] => Mux0.IN5
+ctrl[1] => Mux0.IN4
+ctrl[2] => Mux0.IN3
+data_input[0] => Mux0.IN6
+data_output[0] <= data_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|associative_buffer:associative_buffer_instance|register:generate_associative_buffer_block[3].key
+async_reset => data_reg[0].ACLR
+async_reset => data_reg[1].ACLR
+async_reset => data_reg[2].ACLR
+clk => data_reg[0].CLK
+clk => data_reg[1].CLK
+clk => data_reg[2].CLK
+ctrl[0] => Mux0.IN5
+ctrl[0] => Mux1.IN5
+ctrl[0] => Mux2.IN5
+ctrl[1] => Mux0.IN4
+ctrl[1] => Mux1.IN4
+ctrl[1] => Mux2.IN4
+ctrl[2] => Mux0.IN3
+ctrl[2] => Mux1.IN3
+ctrl[2] => Mux2.IN3
+data_input[0] => Mux2.IN6
+data_input[1] => Mux1.IN6
+data_input[2] => Mux0.IN6
+data_output[0] <= data_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+data_output[1] <= data_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+data_output[2] <= data_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|associative_buffer:associative_buffer_instance|register:generate_associative_buffer_block[3].data
+async_reset => data_reg[0].ACLR
+async_reset => data_reg[1].ACLR
+async_reset => data_reg[2].ACLR
+clk => data_reg[0].CLK
+clk => data_reg[1].CLK
+clk => data_reg[2].CLK
+ctrl[0] => Mux0.IN5
+ctrl[0] => Mux1.IN5
+ctrl[0] => Mux2.IN5
+ctrl[1] => Mux0.IN4
+ctrl[1] => Mux1.IN4
+ctrl[1] => Mux2.IN4
+ctrl[2] => Mux0.IN3
+ctrl[2] => Mux1.IN3
+ctrl[2] => Mux2.IN3
+data_input[0] => Mux2.IN6
+data_input[1] => Mux1.IN6
+data_input[2] => Mux0.IN6
+data_output[0] <= data_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+data_output[1] <= data_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+data_output[2] <= data_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|associative_buffer:associative_buffer_instance|register:generate_associative_buffer_block[3].lru
+async_reset => data_reg[0].ACLR
+async_reset => data_reg[1].ACLR
+async_reset => data_reg[2].ACLR
+async_reset => data_reg[3].ACLR
+clk => data_reg[0].CLK
+clk => data_reg[1].CLK
+clk => data_reg[2].CLK
+clk => data_reg[3].CLK
+ctrl[0] => Mux0.IN5
+ctrl[0] => Mux1.IN5
+ctrl[0] => Mux2.IN5
+ctrl[0] => Mux3.IN5
+ctrl[1] => Mux0.IN4
+ctrl[1] => Mux1.IN4
+ctrl[1] => Mux2.IN4
+ctrl[1] => Mux3.IN4
+ctrl[2] => Mux0.IN3
+ctrl[2] => Mux1.IN3
+ctrl[2] => Mux2.IN3
+ctrl[2] => Mux3.IN3
+data_input[0] => Mux3.IN6
+data_input[1] => Mux2.IN6
+data_input[2] => Mux1.IN6
+data_input[3] => Mux0.IN6
+data_output[0] <= data_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+data_output[1] <= data_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+data_output[2] <= data_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+data_output[3] <= data_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|associative_buffer:associative_buffer_instance|register:generate_associative_buffer_block[4].valid
+async_reset => data_reg[0].ACLR
+clk => data_reg[0].CLK
+ctrl[0] => Mux0.IN5
+ctrl[1] => Mux0.IN4
+ctrl[2] => Mux0.IN3
+data_input[0] => Mux0.IN6
+data_output[0] <= data_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|associative_buffer:associative_buffer_instance|register:generate_associative_buffer_block[4].key
+async_reset => data_reg[0].ACLR
+async_reset => data_reg[1].ACLR
+async_reset => data_reg[2].ACLR
+clk => data_reg[0].CLK
+clk => data_reg[1].CLK
+clk => data_reg[2].CLK
+ctrl[0] => Mux0.IN5
+ctrl[0] => Mux1.IN5
+ctrl[0] => Mux2.IN5
+ctrl[1] => Mux0.IN4
+ctrl[1] => Mux1.IN4
+ctrl[1] => Mux2.IN4
+ctrl[2] => Mux0.IN3
+ctrl[2] => Mux1.IN3
+ctrl[2] => Mux2.IN3
+data_input[0] => Mux2.IN6
+data_input[1] => Mux1.IN6
+data_input[2] => Mux0.IN6
+data_output[0] <= data_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+data_output[1] <= data_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+data_output[2] <= data_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|associative_buffer:associative_buffer_instance|register:generate_associative_buffer_block[4].data
+async_reset => data_reg[0].ACLR
+async_reset => data_reg[1].ACLR
+async_reset => data_reg[2].ACLR
+clk => data_reg[0].CLK
+clk => data_reg[1].CLK
+clk => data_reg[2].CLK
+ctrl[0] => Mux0.IN5
+ctrl[0] => Mux1.IN5
+ctrl[0] => Mux2.IN5
+ctrl[1] => Mux0.IN4
+ctrl[1] => Mux1.IN4
+ctrl[1] => Mux2.IN4
+ctrl[2] => Mux0.IN3
+ctrl[2] => Mux1.IN3
+ctrl[2] => Mux2.IN3
+data_input[0] => Mux2.IN6
+data_input[1] => Mux1.IN6
+data_input[2] => Mux0.IN6
+data_output[0] <= data_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+data_output[1] <= data_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+data_output[2] <= data_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|associative_buffer:associative_buffer_instance|register:generate_associative_buffer_block[4].lru
+async_reset => data_reg[0].ACLR
+async_reset => data_reg[1].ACLR
+async_reset => data_reg[2].ACLR
+async_reset => data_reg[3].ACLR
+clk => data_reg[0].CLK
+clk => data_reg[1].CLK
+clk => data_reg[2].CLK
+clk => data_reg[3].CLK
+ctrl[0] => Mux0.IN5
+ctrl[0] => Mux1.IN5
+ctrl[0] => Mux2.IN5
+ctrl[0] => Mux3.IN5
+ctrl[1] => Mux0.IN4
+ctrl[1] => Mux1.IN4
+ctrl[1] => Mux2.IN4
+ctrl[1] => Mux3.IN4
+ctrl[2] => Mux0.IN3
+ctrl[2] => Mux1.IN3
+ctrl[2] => Mux2.IN3
+ctrl[2] => Mux3.IN3
+data_input[0] => Mux3.IN6
+data_input[1] => Mux2.IN6
+data_input[2] => Mux1.IN6
+data_input[3] => Mux0.IN6
+data_output[0] <= data_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+data_output[1] <= data_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+data_output[2] <= data_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+data_output[3] <= data_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|associative_buffer:associative_buffer_instance|register:generate_associative_buffer_block[5].valid
+async_reset => data_reg[0].ACLR
+clk => data_reg[0].CLK
+ctrl[0] => Mux0.IN5
+ctrl[1] => Mux0.IN4
+ctrl[2] => Mux0.IN3
+data_input[0] => Mux0.IN6
+data_output[0] <= data_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|associative_buffer:associative_buffer_instance|register:generate_associative_buffer_block[5].key
+async_reset => data_reg[0].ACLR
+async_reset => data_reg[1].ACLR
+async_reset => data_reg[2].ACLR
+clk => data_reg[0].CLK
+clk => data_reg[1].CLK
+clk => data_reg[2].CLK
+ctrl[0] => Mux0.IN5
+ctrl[0] => Mux1.IN5
+ctrl[0] => Mux2.IN5
+ctrl[1] => Mux0.IN4
+ctrl[1] => Mux1.IN4
+ctrl[1] => Mux2.IN4
+ctrl[2] => Mux0.IN3
+ctrl[2] => Mux1.IN3
+ctrl[2] => Mux2.IN3
+data_input[0] => Mux2.IN6
+data_input[1] => Mux1.IN6
+data_input[2] => Mux0.IN6
+data_output[0] <= data_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+data_output[1] <= data_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+data_output[2] <= data_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|associative_buffer:associative_buffer_instance|register:generate_associative_buffer_block[5].data
+async_reset => data_reg[0].ACLR
+async_reset => data_reg[1].ACLR
+async_reset => data_reg[2].ACLR
+clk => data_reg[0].CLK
+clk => data_reg[1].CLK
+clk => data_reg[2].CLK
+ctrl[0] => Mux0.IN5
+ctrl[0] => Mux1.IN5
+ctrl[0] => Mux2.IN5
+ctrl[1] => Mux0.IN4
+ctrl[1] => Mux1.IN4
+ctrl[1] => Mux2.IN4
+ctrl[2] => Mux0.IN3
+ctrl[2] => Mux1.IN3
+ctrl[2] => Mux2.IN3
+data_input[0] => Mux2.IN6
+data_input[1] => Mux1.IN6
+data_input[2] => Mux0.IN6
+data_output[0] <= data_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+data_output[1] <= data_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+data_output[2] <= data_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|associative_buffer:associative_buffer_instance|register:generate_associative_buffer_block[5].lru
+async_reset => data_reg[0].ACLR
+async_reset => data_reg[1].ACLR
+async_reset => data_reg[2].ACLR
+async_reset => data_reg[3].ACLR
+clk => data_reg[0].CLK
+clk => data_reg[1].CLK
+clk => data_reg[2].CLK
+clk => data_reg[3].CLK
+ctrl[0] => Mux0.IN5
+ctrl[0] => Mux1.IN5
+ctrl[0] => Mux2.IN5
+ctrl[0] => Mux3.IN5
+ctrl[1] => Mux0.IN4
+ctrl[1] => Mux1.IN4
+ctrl[1] => Mux2.IN4
+ctrl[1] => Mux3.IN4
+ctrl[2] => Mux0.IN3
+ctrl[2] => Mux1.IN3
+ctrl[2] => Mux2.IN3
+ctrl[2] => Mux3.IN3
+data_input[0] => Mux3.IN6
+data_input[1] => Mux2.IN6
+data_input[2] => Mux1.IN6
+data_input[3] => Mux0.IN6
+data_output[0] <= data_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+data_output[1] <= data_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+data_output[2] <= data_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+data_output[3] <= data_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|associative_buffer:associative_buffer_instance|register:generate_associative_buffer_block[6].valid
+async_reset => data_reg[0].ACLR
+clk => data_reg[0].CLK
+ctrl[0] => Mux0.IN5
+ctrl[1] => Mux0.IN4
+ctrl[2] => Mux0.IN3
+data_input[0] => Mux0.IN6
+data_output[0] <= data_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|associative_buffer:associative_buffer_instance|register:generate_associative_buffer_block[6].key
+async_reset => data_reg[0].ACLR
+async_reset => data_reg[1].ACLR
+async_reset => data_reg[2].ACLR
+clk => data_reg[0].CLK
+clk => data_reg[1].CLK
+clk => data_reg[2].CLK
+ctrl[0] => Mux0.IN5
+ctrl[0] => Mux1.IN5
+ctrl[0] => Mux2.IN5
+ctrl[1] => Mux0.IN4
+ctrl[1] => Mux1.IN4
+ctrl[1] => Mux2.IN4
+ctrl[2] => Mux0.IN3
+ctrl[2] => Mux1.IN3
+ctrl[2] => Mux2.IN3
+data_input[0] => Mux2.IN6
+data_input[1] => Mux1.IN6
+data_input[2] => Mux0.IN6
+data_output[0] <= data_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+data_output[1] <= data_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+data_output[2] <= data_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|associative_buffer:associative_buffer_instance|register:generate_associative_buffer_block[6].data
+async_reset => data_reg[0].ACLR
+async_reset => data_reg[1].ACLR
+async_reset => data_reg[2].ACLR
+clk => data_reg[0].CLK
+clk => data_reg[1].CLK
+clk => data_reg[2].CLK
+ctrl[0] => Mux0.IN5
+ctrl[0] => Mux1.IN5
+ctrl[0] => Mux2.IN5
+ctrl[1] => Mux0.IN4
+ctrl[1] => Mux1.IN4
+ctrl[1] => Mux2.IN4
+ctrl[2] => Mux0.IN3
+ctrl[2] => Mux1.IN3
+ctrl[2] => Mux2.IN3
+data_input[0] => Mux2.IN6
+data_input[1] => Mux1.IN6
+data_input[2] => Mux0.IN6
+data_output[0] <= data_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+data_output[1] <= data_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+data_output[2] <= data_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|associative_buffer:associative_buffer_instance|register:generate_associative_buffer_block[6].lru
+async_reset => data_reg[0].ACLR
+async_reset => data_reg[1].ACLR
+async_reset => data_reg[2].ACLR
+async_reset => data_reg[3].ACLR
+clk => data_reg[0].CLK
+clk => data_reg[1].CLK
+clk => data_reg[2].CLK
+clk => data_reg[3].CLK
+ctrl[0] => Mux0.IN5
+ctrl[0] => Mux1.IN5
+ctrl[0] => Mux2.IN5
+ctrl[0] => Mux3.IN5
+ctrl[1] => Mux0.IN4
+ctrl[1] => Mux1.IN4
+ctrl[1] => Mux2.IN4
+ctrl[1] => Mux3.IN4
+ctrl[2] => Mux0.IN3
+ctrl[2] => Mux1.IN3
+ctrl[2] => Mux2.IN3
+ctrl[2] => Mux3.IN3
+data_input[0] => Mux3.IN6
+data_input[1] => Mux2.IN6
+data_input[2] => Mux1.IN6
+data_input[3] => Mux0.IN6
+data_output[0] <= data_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+data_output[1] <= data_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+data_output[2] <= data_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+data_output[3] <= data_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|associative_buffer:associative_buffer_instance|register:generate_associative_buffer_block[7].valid
+async_reset => data_reg[0].ACLR
+clk => data_reg[0].CLK
+ctrl[0] => Mux0.IN5
+ctrl[1] => Mux0.IN4
+ctrl[2] => Mux0.IN3
+data_input[0] => Mux0.IN6
+data_output[0] <= data_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|associative_buffer:associative_buffer_instance|register:generate_associative_buffer_block[7].key
+async_reset => data_reg[0].ACLR
+async_reset => data_reg[1].ACLR
+async_reset => data_reg[2].ACLR
+clk => data_reg[0].CLK
+clk => data_reg[1].CLK
+clk => data_reg[2].CLK
+ctrl[0] => Mux0.IN5
+ctrl[0] => Mux1.IN5
+ctrl[0] => Mux2.IN5
+ctrl[1] => Mux0.IN4
+ctrl[1] => Mux1.IN4
+ctrl[1] => Mux2.IN4
+ctrl[2] => Mux0.IN3
+ctrl[2] => Mux1.IN3
+ctrl[2] => Mux2.IN3
+data_input[0] => Mux2.IN6
+data_input[1] => Mux1.IN6
+data_input[2] => Mux0.IN6
+data_output[0] <= data_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+data_output[1] <= data_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+data_output[2] <= data_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|associative_buffer:associative_buffer_instance|register:generate_associative_buffer_block[7].data
+async_reset => data_reg[0].ACLR
+async_reset => data_reg[1].ACLR
+async_reset => data_reg[2].ACLR
+clk => data_reg[0].CLK
+clk => data_reg[1].CLK
+clk => data_reg[2].CLK
+ctrl[0] => Mux0.IN5
+ctrl[0] => Mux1.IN5
+ctrl[0] => Mux2.IN5
+ctrl[1] => Mux0.IN4
+ctrl[1] => Mux1.IN4
+ctrl[1] => Mux2.IN4
+ctrl[2] => Mux0.IN3
+ctrl[2] => Mux1.IN3
+ctrl[2] => Mux2.IN3
+data_input[0] => Mux2.IN6
+data_input[1] => Mux1.IN6
+data_input[2] => Mux0.IN6
+data_output[0] <= data_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+data_output[1] <= data_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+data_output[2] <= data_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|associative_buffer:associative_buffer_instance|register:generate_associative_buffer_block[7].lru
+async_reset => data_reg[0].ACLR
+async_reset => data_reg[1].ACLR
+async_reset => data_reg[2].ACLR
+async_reset => data_reg[3].ACLR
+clk => data_reg[0].CLK
+clk => data_reg[1].CLK
+clk => data_reg[2].CLK
+clk => data_reg[3].CLK
+ctrl[0] => Mux0.IN5
+ctrl[0] => Mux1.IN5
+ctrl[0] => Mux2.IN5
+ctrl[0] => Mux3.IN5
+ctrl[1] => Mux0.IN4
+ctrl[1] => Mux1.IN4
+ctrl[1] => Mux2.IN4
+ctrl[1] => Mux3.IN4
+ctrl[2] => Mux0.IN3
+ctrl[2] => Mux1.IN3
+ctrl[2] => Mux2.IN3
+ctrl[2] => Mux3.IN3
+data_input[0] => Mux3.IN6
+data_input[1] => Mux2.IN6
+data_input[2] => Mux1.IN6
+data_input[3] => Mux0.IN6
+data_output[0] <= data_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+data_output[1] <= data_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+data_output[2] <= data_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+data_output[3] <= data_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|associative_buffer:associative_buffer_instance|register:generate_associative_buffer_block[8].valid
+async_reset => data_reg[0].ACLR
+clk => data_reg[0].CLK
+ctrl[0] => Mux0.IN5
+ctrl[1] => Mux0.IN4
+ctrl[2] => Mux0.IN3
+data_input[0] => Mux0.IN6
+data_output[0] <= data_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|associative_buffer:associative_buffer_instance|register:generate_associative_buffer_block[8].key
+async_reset => data_reg[0].ACLR
+async_reset => data_reg[1].ACLR
+async_reset => data_reg[2].ACLR
+clk => data_reg[0].CLK
+clk => data_reg[1].CLK
+clk => data_reg[2].CLK
+ctrl[0] => Mux0.IN5
+ctrl[0] => Mux1.IN5
+ctrl[0] => Mux2.IN5
+ctrl[1] => Mux0.IN4
+ctrl[1] => Mux1.IN4
+ctrl[1] => Mux2.IN4
+ctrl[2] => Mux0.IN3
+ctrl[2] => Mux1.IN3
+ctrl[2] => Mux2.IN3
+data_input[0] => Mux2.IN6
+data_input[1] => Mux1.IN6
+data_input[2] => Mux0.IN6
+data_output[0] <= data_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+data_output[1] <= data_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+data_output[2] <= data_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|associative_buffer:associative_buffer_instance|register:generate_associative_buffer_block[8].data
+async_reset => data_reg[0].ACLR
+async_reset => data_reg[1].ACLR
+async_reset => data_reg[2].ACLR
+clk => data_reg[0].CLK
+clk => data_reg[1].CLK
+clk => data_reg[2].CLK
+ctrl[0] => Mux0.IN5
+ctrl[0] => Mux1.IN5
+ctrl[0] => Mux2.IN5
+ctrl[1] => Mux0.IN4
+ctrl[1] => Mux1.IN4
+ctrl[1] => Mux2.IN4
+ctrl[2] => Mux0.IN3
+ctrl[2] => Mux1.IN3
+ctrl[2] => Mux2.IN3
+data_input[0] => Mux2.IN6
+data_input[1] => Mux1.IN6
+data_input[2] => Mux0.IN6
+data_output[0] <= data_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+data_output[1] <= data_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+data_output[2] <= data_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|associative_buffer:associative_buffer_instance|register:generate_associative_buffer_block[8].lru
+async_reset => data_reg[0].ACLR
+async_reset => data_reg[1].ACLR
+async_reset => data_reg[2].ACLR
+async_reset => data_reg[3].ACLR
+clk => data_reg[0].CLK
+clk => data_reg[1].CLK
+clk => data_reg[2].CLK
+clk => data_reg[3].CLK
+ctrl[0] => Mux0.IN5
+ctrl[0] => Mux1.IN5
+ctrl[0] => Mux2.IN5
+ctrl[0] => Mux3.IN5
+ctrl[1] => Mux0.IN4
+ctrl[1] => Mux1.IN4
+ctrl[1] => Mux2.IN4
+ctrl[1] => Mux3.IN4
+ctrl[2] => Mux0.IN3
+ctrl[2] => Mux1.IN3
+ctrl[2] => Mux2.IN3
+ctrl[2] => Mux3.IN3
+data_input[0] => Mux3.IN6
+data_input[1] => Mux2.IN6
+data_input[2] => Mux1.IN6
+data_input[3] => Mux0.IN6
+data_output[0] <= data_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+data_output[1] <= data_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+data_output[2] <= data_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+data_output[3] <= data_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|associative_buffer:associative_buffer_instance|register:generate_associative_buffer_block[9].valid
+async_reset => data_reg[0].ACLR
+clk => data_reg[0].CLK
+ctrl[0] => Mux0.IN5
+ctrl[1] => Mux0.IN4
+ctrl[2] => Mux0.IN3
+data_input[0] => Mux0.IN6
+data_output[0] <= data_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|associative_buffer:associative_buffer_instance|register:generate_associative_buffer_block[9].key
+async_reset => data_reg[0].ACLR
+async_reset => data_reg[1].ACLR
+async_reset => data_reg[2].ACLR
+clk => data_reg[0].CLK
+clk => data_reg[1].CLK
+clk => data_reg[2].CLK
+ctrl[0] => Mux0.IN5
+ctrl[0] => Mux1.IN5
+ctrl[0] => Mux2.IN5
+ctrl[1] => Mux0.IN4
+ctrl[1] => Mux1.IN4
+ctrl[1] => Mux2.IN4
+ctrl[2] => Mux0.IN3
+ctrl[2] => Mux1.IN3
+ctrl[2] => Mux2.IN3
+data_input[0] => Mux2.IN6
+data_input[1] => Mux1.IN6
+data_input[2] => Mux0.IN6
+data_output[0] <= data_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+data_output[1] <= data_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+data_output[2] <= data_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|associative_buffer:associative_buffer_instance|register:generate_associative_buffer_block[9].data
+async_reset => data_reg[0].ACLR
+async_reset => data_reg[1].ACLR
+async_reset => data_reg[2].ACLR
+clk => data_reg[0].CLK
+clk => data_reg[1].CLK
+clk => data_reg[2].CLK
+ctrl[0] => Mux0.IN5
+ctrl[0] => Mux1.IN5
+ctrl[0] => Mux2.IN5
+ctrl[1] => Mux0.IN4
+ctrl[1] => Mux1.IN4
+ctrl[1] => Mux2.IN4
+ctrl[2] => Mux0.IN3
+ctrl[2] => Mux1.IN3
+ctrl[2] => Mux2.IN3
+data_input[0] => Mux2.IN6
+data_input[1] => Mux1.IN6
+data_input[2] => Mux0.IN6
+data_output[0] <= data_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+data_output[1] <= data_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+data_output[2] <= data_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|associative_buffer:associative_buffer_instance|register:generate_associative_buffer_block[9].lru
+async_reset => data_reg[0].ACLR
+async_reset => data_reg[1].ACLR
+async_reset => data_reg[2].ACLR
+async_reset => data_reg[3].ACLR
+clk => data_reg[0].CLK
+clk => data_reg[1].CLK
+clk => data_reg[2].CLK
+clk => data_reg[3].CLK
+ctrl[0] => Mux0.IN5
+ctrl[0] => Mux1.IN5
+ctrl[0] => Mux2.IN5
+ctrl[0] => Mux3.IN5
+ctrl[1] => Mux0.IN4
+ctrl[1] => Mux1.IN4
+ctrl[1] => Mux2.IN4
+ctrl[1] => Mux3.IN4
+ctrl[2] => Mux0.IN3
+ctrl[2] => Mux1.IN3
+ctrl[2] => Mux2.IN3
+ctrl[2] => Mux3.IN3
+data_input[0] => Mux3.IN6
+data_input[1] => Mux2.IN6
+data_input[2] => Mux1.IN6
+data_input[3] => Mux0.IN6
+data_output[0] <= data_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+data_output[1] <= data_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+data_output[2] <= data_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+data_output[3] <= data_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|associative_buffer:associative_buffer_instance|register:generate_associative_buffer_block[10].valid
+async_reset => data_reg[0].ACLR
+clk => data_reg[0].CLK
+ctrl[0] => Mux0.IN5
+ctrl[1] => Mux0.IN4
+ctrl[2] => Mux0.IN3
+data_input[0] => Mux0.IN6
+data_output[0] <= data_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|associative_buffer:associative_buffer_instance|register:generate_associative_buffer_block[10].key
+async_reset => data_reg[0].ACLR
+async_reset => data_reg[1].ACLR
+async_reset => data_reg[2].ACLR
+clk => data_reg[0].CLK
+clk => data_reg[1].CLK
+clk => data_reg[2].CLK
+ctrl[0] => Mux0.IN5
+ctrl[0] => Mux1.IN5
+ctrl[0] => Mux2.IN5
+ctrl[1] => Mux0.IN4
+ctrl[1] => Mux1.IN4
+ctrl[1] => Mux2.IN4
+ctrl[2] => Mux0.IN3
+ctrl[2] => Mux1.IN3
+ctrl[2] => Mux2.IN3
+data_input[0] => Mux2.IN6
+data_input[1] => Mux1.IN6
+data_input[2] => Mux0.IN6
+data_output[0] <= data_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+data_output[1] <= data_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+data_output[2] <= data_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|associative_buffer:associative_buffer_instance|register:generate_associative_buffer_block[10].data
+async_reset => data_reg[0].ACLR
+async_reset => data_reg[1].ACLR
+async_reset => data_reg[2].ACLR
+clk => data_reg[0].CLK
+clk => data_reg[1].CLK
+clk => data_reg[2].CLK
+ctrl[0] => Mux0.IN5
+ctrl[0] => Mux1.IN5
+ctrl[0] => Mux2.IN5
+ctrl[1] => Mux0.IN4
+ctrl[1] => Mux1.IN4
+ctrl[1] => Mux2.IN4
+ctrl[2] => Mux0.IN3
+ctrl[2] => Mux1.IN3
+ctrl[2] => Mux2.IN3
+data_input[0] => Mux2.IN6
+data_input[1] => Mux1.IN6
+data_input[2] => Mux0.IN6
+data_output[0] <= data_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+data_output[1] <= data_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+data_output[2] <= data_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|associative_buffer:associative_buffer_instance|register:generate_associative_buffer_block[10].lru
+async_reset => data_reg[0].ACLR
+async_reset => data_reg[1].ACLR
+async_reset => data_reg[2].ACLR
+async_reset => data_reg[3].ACLR
+clk => data_reg[0].CLK
+clk => data_reg[1].CLK
+clk => data_reg[2].CLK
+clk => data_reg[3].CLK
+ctrl[0] => Mux0.IN5
+ctrl[0] => Mux1.IN5
+ctrl[0] => Mux2.IN5
+ctrl[0] => Mux3.IN5
+ctrl[1] => Mux0.IN4
+ctrl[1] => Mux1.IN4
+ctrl[1] => Mux2.IN4
+ctrl[1] => Mux3.IN4
+ctrl[2] => Mux0.IN3
+ctrl[2] => Mux1.IN3
+ctrl[2] => Mux2.IN3
+ctrl[2] => Mux3.IN3
+data_input[0] => Mux3.IN6
+data_input[1] => Mux2.IN6
+data_input[2] => Mux1.IN6
+data_input[3] => Mux0.IN6
+data_output[0] <= data_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+data_output[1] <= data_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+data_output[2] <= data_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+data_output[3] <= data_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|associative_buffer:associative_buffer_instance|register:generate_associative_buffer_block[11].valid
+async_reset => data_reg[0].ACLR
+clk => data_reg[0].CLK
+ctrl[0] => Mux0.IN5
+ctrl[1] => Mux0.IN4
+ctrl[2] => Mux0.IN3
+data_input[0] => Mux0.IN6
+data_output[0] <= data_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|associative_buffer:associative_buffer_instance|register:generate_associative_buffer_block[11].key
+async_reset => data_reg[0].ACLR
+async_reset => data_reg[1].ACLR
+async_reset => data_reg[2].ACLR
+clk => data_reg[0].CLK
+clk => data_reg[1].CLK
+clk => data_reg[2].CLK
+ctrl[0] => Mux0.IN5
+ctrl[0] => Mux1.IN5
+ctrl[0] => Mux2.IN5
+ctrl[1] => Mux0.IN4
+ctrl[1] => Mux1.IN4
+ctrl[1] => Mux2.IN4
+ctrl[2] => Mux0.IN3
+ctrl[2] => Mux1.IN3
+ctrl[2] => Mux2.IN3
+data_input[0] => Mux2.IN6
+data_input[1] => Mux1.IN6
+data_input[2] => Mux0.IN6
+data_output[0] <= data_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+data_output[1] <= data_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+data_output[2] <= data_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|associative_buffer:associative_buffer_instance|register:generate_associative_buffer_block[11].data
+async_reset => data_reg[0].ACLR
+async_reset => data_reg[1].ACLR
+async_reset => data_reg[2].ACLR
+clk => data_reg[0].CLK
+clk => data_reg[1].CLK
+clk => data_reg[2].CLK
+ctrl[0] => Mux0.IN5
+ctrl[0] => Mux1.IN5
+ctrl[0] => Mux2.IN5
+ctrl[1] => Mux0.IN4
+ctrl[1] => Mux1.IN4
+ctrl[1] => Mux2.IN4
+ctrl[2] => Mux0.IN3
+ctrl[2] => Mux1.IN3
+ctrl[2] => Mux2.IN3
+data_input[0] => Mux2.IN6
+data_input[1] => Mux1.IN6
+data_input[2] => Mux0.IN6
+data_output[0] <= data_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+data_output[1] <= data_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+data_output[2] <= data_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|associative_buffer:associative_buffer_instance|register:generate_associative_buffer_block[11].lru
+async_reset => data_reg[0].ACLR
+async_reset => data_reg[1].ACLR
+async_reset => data_reg[2].ACLR
+async_reset => data_reg[3].ACLR
+clk => data_reg[0].CLK
+clk => data_reg[1].CLK
+clk => data_reg[2].CLK
+clk => data_reg[3].CLK
+ctrl[0] => Mux0.IN5
+ctrl[0] => Mux1.IN5
+ctrl[0] => Mux2.IN5
+ctrl[0] => Mux3.IN5
+ctrl[1] => Mux0.IN4
+ctrl[1] => Mux1.IN4
+ctrl[1] => Mux2.IN4
+ctrl[1] => Mux3.IN4
+ctrl[2] => Mux0.IN3
+ctrl[2] => Mux1.IN3
+ctrl[2] => Mux2.IN3
+ctrl[2] => Mux3.IN3
+data_input[0] => Mux3.IN6
+data_input[1] => Mux2.IN6
+data_input[2] => Mux1.IN6
+data_input[3] => Mux0.IN6
+data_output[0] <= data_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+data_output[1] <= data_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+data_output[2] <= data_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+data_output[3] <= data_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|associative_buffer:associative_buffer_instance|register:generate_associative_buffer_block[12].valid
+async_reset => data_reg[0].ACLR
+clk => data_reg[0].CLK
+ctrl[0] => Mux0.IN5
+ctrl[1] => Mux0.IN4
+ctrl[2] => Mux0.IN3
+data_input[0] => Mux0.IN6
+data_output[0] <= data_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|associative_buffer:associative_buffer_instance|register:generate_associative_buffer_block[12].key
+async_reset => data_reg[0].ACLR
+async_reset => data_reg[1].ACLR
+async_reset => data_reg[2].ACLR
+clk => data_reg[0].CLK
+clk => data_reg[1].CLK
+clk => data_reg[2].CLK
+ctrl[0] => Mux0.IN5
+ctrl[0] => Mux1.IN5
+ctrl[0] => Mux2.IN5
+ctrl[1] => Mux0.IN4
+ctrl[1] => Mux1.IN4
+ctrl[1] => Mux2.IN4
+ctrl[2] => Mux0.IN3
+ctrl[2] => Mux1.IN3
+ctrl[2] => Mux2.IN3
+data_input[0] => Mux2.IN6
+data_input[1] => Mux1.IN6
+data_input[2] => Mux0.IN6
+data_output[0] <= data_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+data_output[1] <= data_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+data_output[2] <= data_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|associative_buffer:associative_buffer_instance|register:generate_associative_buffer_block[12].data
+async_reset => data_reg[0].ACLR
+async_reset => data_reg[1].ACLR
+async_reset => data_reg[2].ACLR
+clk => data_reg[0].CLK
+clk => data_reg[1].CLK
+clk => data_reg[2].CLK
+ctrl[0] => Mux0.IN5
+ctrl[0] => Mux1.IN5
+ctrl[0] => Mux2.IN5
+ctrl[1] => Mux0.IN4
+ctrl[1] => Mux1.IN4
+ctrl[1] => Mux2.IN4
+ctrl[2] => Mux0.IN3
+ctrl[2] => Mux1.IN3
+ctrl[2] => Mux2.IN3
+data_input[0] => Mux2.IN6
+data_input[1] => Mux1.IN6
+data_input[2] => Mux0.IN6
+data_output[0] <= data_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+data_output[1] <= data_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+data_output[2] <= data_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|associative_buffer:associative_buffer_instance|register:generate_associative_buffer_block[12].lru
+async_reset => data_reg[0].ACLR
+async_reset => data_reg[1].ACLR
+async_reset => data_reg[2].ACLR
+async_reset => data_reg[3].ACLR
+clk => data_reg[0].CLK
+clk => data_reg[1].CLK
+clk => data_reg[2].CLK
+clk => data_reg[3].CLK
+ctrl[0] => Mux0.IN5
+ctrl[0] => Mux1.IN5
+ctrl[0] => Mux2.IN5
+ctrl[0] => Mux3.IN5
+ctrl[1] => Mux0.IN4
+ctrl[1] => Mux1.IN4
+ctrl[1] => Mux2.IN4
+ctrl[1] => Mux3.IN4
+ctrl[2] => Mux0.IN3
+ctrl[2] => Mux1.IN3
+ctrl[2] => Mux2.IN3
+ctrl[2] => Mux3.IN3
+data_input[0] => Mux3.IN6
+data_input[1] => Mux2.IN6
+data_input[2] => Mux1.IN6
+data_input[3] => Mux0.IN6
+data_output[0] <= data_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+data_output[1] <= data_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+data_output[2] <= data_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+data_output[3] <= data_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|associative_buffer:associative_buffer_instance|register:generate_associative_buffer_block[13].valid
+async_reset => data_reg[0].ACLR
+clk => data_reg[0].CLK
+ctrl[0] => Mux0.IN5
+ctrl[1] => Mux0.IN4
+ctrl[2] => Mux0.IN3
+data_input[0] => Mux0.IN6
+data_output[0] <= data_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|associative_buffer:associative_buffer_instance|register:generate_associative_buffer_block[13].key
+async_reset => data_reg[0].ACLR
+async_reset => data_reg[1].ACLR
+async_reset => data_reg[2].ACLR
+clk => data_reg[0].CLK
+clk => data_reg[1].CLK
+clk => data_reg[2].CLK
+ctrl[0] => Mux0.IN5
+ctrl[0] => Mux1.IN5
+ctrl[0] => Mux2.IN5
+ctrl[1] => Mux0.IN4
+ctrl[1] => Mux1.IN4
+ctrl[1] => Mux2.IN4
+ctrl[2] => Mux0.IN3
+ctrl[2] => Mux1.IN3
+ctrl[2] => Mux2.IN3
+data_input[0] => Mux2.IN6
+data_input[1] => Mux1.IN6
+data_input[2] => Mux0.IN6
+data_output[0] <= data_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+data_output[1] <= data_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+data_output[2] <= data_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|associative_buffer:associative_buffer_instance|register:generate_associative_buffer_block[13].data
+async_reset => data_reg[0].ACLR
+async_reset => data_reg[1].ACLR
+async_reset => data_reg[2].ACLR
+clk => data_reg[0].CLK
+clk => data_reg[1].CLK
+clk => data_reg[2].CLK
+ctrl[0] => Mux0.IN5
+ctrl[0] => Mux1.IN5
+ctrl[0] => Mux2.IN5
+ctrl[1] => Mux0.IN4
+ctrl[1] => Mux1.IN4
+ctrl[1] => Mux2.IN4
+ctrl[2] => Mux0.IN3
+ctrl[2] => Mux1.IN3
+ctrl[2] => Mux2.IN3
+data_input[0] => Mux2.IN6
+data_input[1] => Mux1.IN6
+data_input[2] => Mux0.IN6
+data_output[0] <= data_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+data_output[1] <= data_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+data_output[2] <= data_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|associative_buffer:associative_buffer_instance|register:generate_associative_buffer_block[13].lru
+async_reset => data_reg[0].ACLR
+async_reset => data_reg[1].ACLR
+async_reset => data_reg[2].ACLR
+async_reset => data_reg[3].ACLR
+clk => data_reg[0].CLK
+clk => data_reg[1].CLK
+clk => data_reg[2].CLK
+clk => data_reg[3].CLK
+ctrl[0] => Mux0.IN5
+ctrl[0] => Mux1.IN5
+ctrl[0] => Mux2.IN5
+ctrl[0] => Mux3.IN5
+ctrl[1] => Mux0.IN4
+ctrl[1] => Mux1.IN4
+ctrl[1] => Mux2.IN4
+ctrl[1] => Mux3.IN4
+ctrl[2] => Mux0.IN3
+ctrl[2] => Mux1.IN3
+ctrl[2] => Mux2.IN3
+ctrl[2] => Mux3.IN3
+data_input[0] => Mux3.IN6
+data_input[1] => Mux2.IN6
+data_input[2] => Mux1.IN6
+data_input[3] => Mux0.IN6
+data_output[0] <= data_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+data_output[1] <= data_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+data_output[2] <= data_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+data_output[3] <= data_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|associative_buffer:associative_buffer_instance|register:generate_associative_buffer_block[14].valid
+async_reset => data_reg[0].ACLR
+clk => data_reg[0].CLK
+ctrl[0] => Mux0.IN5
+ctrl[1] => Mux0.IN4
+ctrl[2] => Mux0.IN3
+data_input[0] => Mux0.IN6
+data_output[0] <= data_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|associative_buffer:associative_buffer_instance|register:generate_associative_buffer_block[14].key
+async_reset => data_reg[0].ACLR
+async_reset => data_reg[1].ACLR
+async_reset => data_reg[2].ACLR
+clk => data_reg[0].CLK
+clk => data_reg[1].CLK
+clk => data_reg[2].CLK
+ctrl[0] => Mux0.IN5
+ctrl[0] => Mux1.IN5
+ctrl[0] => Mux2.IN5
+ctrl[1] => Mux0.IN4
+ctrl[1] => Mux1.IN4
+ctrl[1] => Mux2.IN4
+ctrl[2] => Mux0.IN3
+ctrl[2] => Mux1.IN3
+ctrl[2] => Mux2.IN3
+data_input[0] => Mux2.IN6
+data_input[1] => Mux1.IN6
+data_input[2] => Mux0.IN6
+data_output[0] <= data_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+data_output[1] <= data_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+data_output[2] <= data_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|associative_buffer:associative_buffer_instance|register:generate_associative_buffer_block[14].data
+async_reset => data_reg[0].ACLR
+async_reset => data_reg[1].ACLR
+async_reset => data_reg[2].ACLR
+clk => data_reg[0].CLK
+clk => data_reg[1].CLK
+clk => data_reg[2].CLK
+ctrl[0] => Mux0.IN5
+ctrl[0] => Mux1.IN5
+ctrl[0] => Mux2.IN5
+ctrl[1] => Mux0.IN4
+ctrl[1] => Mux1.IN4
+ctrl[1] => Mux2.IN4
+ctrl[2] => Mux0.IN3
+ctrl[2] => Mux1.IN3
+ctrl[2] => Mux2.IN3
+data_input[0] => Mux2.IN6
+data_input[1] => Mux1.IN6
+data_input[2] => Mux0.IN6
+data_output[0] <= data_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+data_output[1] <= data_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+data_output[2] <= data_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|associative_buffer:associative_buffer_instance|register:generate_associative_buffer_block[14].lru
+async_reset => data_reg[0].ACLR
+async_reset => data_reg[1].ACLR
+async_reset => data_reg[2].ACLR
+async_reset => data_reg[3].ACLR
+clk => data_reg[0].CLK
+clk => data_reg[1].CLK
+clk => data_reg[2].CLK
+clk => data_reg[3].CLK
+ctrl[0] => Mux0.IN5
+ctrl[0] => Mux1.IN5
+ctrl[0] => Mux2.IN5
+ctrl[0] => Mux3.IN5
+ctrl[1] => Mux0.IN4
+ctrl[1] => Mux1.IN4
+ctrl[1] => Mux2.IN4
+ctrl[1] => Mux3.IN4
+ctrl[2] => Mux0.IN3
+ctrl[2] => Mux1.IN3
+ctrl[2] => Mux2.IN3
+ctrl[2] => Mux3.IN3
+data_input[0] => Mux3.IN6
+data_input[1] => Mux2.IN6
+data_input[2] => Mux1.IN6
+data_input[3] => Mux0.IN6
+data_output[0] <= data_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+data_output[1] <= data_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+data_output[2] <= data_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+data_output[3] <= data_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|associative_buffer:associative_buffer_instance|register:generate_associative_buffer_block[15].valid
+async_reset => data_reg[0].ACLR
+clk => data_reg[0].CLK
+ctrl[0] => Mux0.IN5
+ctrl[1] => Mux0.IN4
+ctrl[2] => Mux0.IN3
+data_input[0] => Mux0.IN6
+data_output[0] <= data_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|associative_buffer:associative_buffer_instance|register:generate_associative_buffer_block[15].key
+async_reset => data_reg[0].ACLR
+async_reset => data_reg[1].ACLR
+async_reset => data_reg[2].ACLR
+clk => data_reg[0].CLK
+clk => data_reg[1].CLK
+clk => data_reg[2].CLK
+ctrl[0] => Mux0.IN5
+ctrl[0] => Mux1.IN5
+ctrl[0] => Mux2.IN5
+ctrl[1] => Mux0.IN4
+ctrl[1] => Mux1.IN4
+ctrl[1] => Mux2.IN4
+ctrl[2] => Mux0.IN3
+ctrl[2] => Mux1.IN3
+ctrl[2] => Mux2.IN3
+data_input[0] => Mux2.IN6
+data_input[1] => Mux1.IN6
+data_input[2] => Mux0.IN6
+data_output[0] <= data_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+data_output[1] <= data_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+data_output[2] <= data_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|associative_buffer:associative_buffer_instance|register:generate_associative_buffer_block[15].data
+async_reset => data_reg[0].ACLR
+async_reset => data_reg[1].ACLR
+async_reset => data_reg[2].ACLR
+clk => data_reg[0].CLK
+clk => data_reg[1].CLK
+clk => data_reg[2].CLK
+ctrl[0] => Mux0.IN5
+ctrl[0] => Mux1.IN5
+ctrl[0] => Mux2.IN5
+ctrl[1] => Mux0.IN4
+ctrl[1] => Mux1.IN4
+ctrl[1] => Mux2.IN4
+ctrl[2] => Mux0.IN3
+ctrl[2] => Mux1.IN3
+ctrl[2] => Mux2.IN3
+data_input[0] => Mux2.IN6
+data_input[1] => Mux1.IN6
+data_input[2] => Mux0.IN6
+data_output[0] <= data_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+data_output[1] <= data_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+data_output[2] <= data_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|associative_buffer:associative_buffer_instance|register:generate_associative_buffer_block[15].lru
+async_reset => data_reg[0].ACLR
+async_reset => data_reg[1].ACLR
+async_reset => data_reg[2].ACLR
+async_reset => data_reg[3].ACLR
+clk => data_reg[0].CLK
+clk => data_reg[1].CLK
+clk => data_reg[2].CLK
+clk => data_reg[3].CLK
+ctrl[0] => Mux0.IN5
+ctrl[0] => Mux1.IN5
+ctrl[0] => Mux2.IN5
+ctrl[0] => Mux3.IN5
+ctrl[1] => Mux0.IN4
+ctrl[1] => Mux1.IN4
+ctrl[1] => Mux2.IN4
+ctrl[1] => Mux3.IN4
+ctrl[2] => Mux0.IN3
+ctrl[2] => Mux1.IN3
+ctrl[2] => Mux2.IN3
+ctrl[2] => Mux3.IN3
+data_input[0] => Mux3.IN6
+data_input[1] => Mux2.IN6
+data_input[2] => Mux1.IN6
+data_input[3] => Mux0.IN6
+data_output[0] <= data_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+data_output[1] <= data_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+data_output[2] <= data_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+data_output[3] <= data_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|associative_buffer:associative_buffer_instance|register:timer
+async_reset => data_reg[0].ACLR
+async_reset => data_reg[1].ACLR
+async_reset => data_reg[2].ACLR
+async_reset => data_reg[3].ACLR
+async_reset => data_reg[4].ACLR
+async_reset => data_reg[5].ACLR
+async_reset => data_reg[6].ACLR
+async_reset => data_reg[7].ACLR
+async_reset => data_reg[8].ACLR
+async_reset => data_reg[9].ACLR
+async_reset => data_reg[10].ACLR
+async_reset => data_reg[11].ACLR
+async_reset => data_reg[12].ACLR
+async_reset => data_reg[13].ACLR
+async_reset => data_reg[14].ACLR
+async_reset => data_reg[15].ACLR
+async_reset => data_reg[16].ACLR
+async_reset => data_reg[17].ACLR
+async_reset => data_reg[18].ACLR
+async_reset => data_reg[19].ACLR
+async_reset => data_reg[20].ACLR
+async_reset => data_reg[21].ACLR
+async_reset => data_reg[22].ACLR
+async_reset => data_reg[23].ACLR
+async_reset => data_reg[24].ACLR
+async_reset => data_reg[25].ACLR
+async_reset => data_reg[26].ACLR
+async_reset => data_reg[27].ACLR
+clk => data_reg[0].CLK
+clk => data_reg[1].CLK
+clk => data_reg[2].CLK
+clk => data_reg[3].CLK
+clk => data_reg[4].CLK
+clk => data_reg[5].CLK
+clk => data_reg[6].CLK
+clk => data_reg[7].CLK
+clk => data_reg[8].CLK
+clk => data_reg[9].CLK
+clk => data_reg[10].CLK
+clk => data_reg[11].CLK
+clk => data_reg[12].CLK
+clk => data_reg[13].CLK
+clk => data_reg[14].CLK
+clk => data_reg[15].CLK
+clk => data_reg[16].CLK
+clk => data_reg[17].CLK
+clk => data_reg[18].CLK
+clk => data_reg[19].CLK
+clk => data_reg[20].CLK
+clk => data_reg[21].CLK
+clk => data_reg[22].CLK
+clk => data_reg[23].CLK
+clk => data_reg[24].CLK
+clk => data_reg[25].CLK
+clk => data_reg[26].CLK
+clk => data_reg[27].CLK
+ctrl[0] => Mux0.IN5
+ctrl[0] => Mux1.IN5
+ctrl[0] => Mux2.IN5
+ctrl[0] => Mux3.IN5
+ctrl[0] => Mux4.IN5
+ctrl[0] => Mux5.IN5
+ctrl[0] => Mux6.IN5
+ctrl[0] => Mux7.IN5
+ctrl[0] => Mux8.IN5
+ctrl[0] => Mux9.IN5
+ctrl[0] => Mux10.IN5
+ctrl[0] => Mux11.IN5
+ctrl[0] => Mux12.IN5
+ctrl[0] => Mux13.IN5
+ctrl[0] => Mux14.IN5
+ctrl[0] => Mux15.IN5
+ctrl[0] => Mux16.IN5
+ctrl[0] => Mux17.IN5
+ctrl[0] => Mux18.IN5
+ctrl[0] => Mux19.IN5
+ctrl[0] => Mux20.IN5
+ctrl[0] => Mux21.IN5
+ctrl[0] => Mux22.IN5
+ctrl[0] => Mux23.IN5
+ctrl[0] => Mux24.IN5
+ctrl[0] => Mux25.IN5
+ctrl[0] => Mux26.IN5
+ctrl[0] => Mux27.IN5
+ctrl[1] => Mux0.IN4
+ctrl[1] => Mux1.IN4
+ctrl[1] => Mux2.IN4
+ctrl[1] => Mux3.IN4
+ctrl[1] => Mux4.IN4
+ctrl[1] => Mux5.IN4
+ctrl[1] => Mux6.IN4
+ctrl[1] => Mux7.IN4
+ctrl[1] => Mux8.IN4
+ctrl[1] => Mux9.IN4
+ctrl[1] => Mux10.IN4
+ctrl[1] => Mux11.IN4
+ctrl[1] => Mux12.IN4
+ctrl[1] => Mux13.IN4
+ctrl[1] => Mux14.IN4
+ctrl[1] => Mux15.IN4
+ctrl[1] => Mux16.IN4
+ctrl[1] => Mux17.IN4
+ctrl[1] => Mux18.IN4
+ctrl[1] => Mux19.IN4
+ctrl[1] => Mux20.IN4
+ctrl[1] => Mux21.IN4
+ctrl[1] => Mux22.IN4
+ctrl[1] => Mux23.IN4
+ctrl[1] => Mux24.IN4
+ctrl[1] => Mux25.IN4
+ctrl[1] => Mux26.IN4
+ctrl[1] => Mux27.IN4
+ctrl[2] => Mux0.IN3
+ctrl[2] => Mux1.IN3
+ctrl[2] => Mux2.IN3
+ctrl[2] => Mux3.IN3
+ctrl[2] => Mux4.IN3
+ctrl[2] => Mux5.IN3
+ctrl[2] => Mux6.IN3
+ctrl[2] => Mux7.IN3
+ctrl[2] => Mux8.IN3
+ctrl[2] => Mux9.IN3
+ctrl[2] => Mux10.IN3
+ctrl[2] => Mux11.IN3
+ctrl[2] => Mux12.IN3
+ctrl[2] => Mux13.IN3
+ctrl[2] => Mux14.IN3
+ctrl[2] => Mux15.IN3
+ctrl[2] => Mux16.IN3
+ctrl[2] => Mux17.IN3
+ctrl[2] => Mux18.IN3
+ctrl[2] => Mux19.IN3
+ctrl[2] => Mux20.IN3
+ctrl[2] => Mux21.IN3
+ctrl[2] => Mux22.IN3
+ctrl[2] => Mux23.IN3
+ctrl[2] => Mux24.IN3
+ctrl[2] => Mux25.IN3
+ctrl[2] => Mux26.IN3
+ctrl[2] => Mux27.IN3
+data_input[0] => Mux27.IN6
+data_input[1] => Mux26.IN6
+data_input[2] => Mux25.IN6
+data_input[3] => Mux24.IN6
+data_input[4] => Mux23.IN6
+data_input[5] => Mux22.IN6
+data_input[6] => Mux21.IN6
+data_input[7] => Mux20.IN6
+data_input[8] => Mux19.IN6
+data_input[9] => Mux18.IN6
+data_input[10] => Mux17.IN6
+data_input[11] => Mux16.IN6
+data_input[12] => Mux15.IN6
+data_input[13] => Mux14.IN6
+data_input[14] => Mux13.IN6
+data_input[15] => Mux12.IN6
+data_input[16] => Mux11.IN6
+data_input[17] => Mux10.IN6
+data_input[18] => Mux9.IN6
+data_input[19] => Mux8.IN6
+data_input[20] => Mux7.IN6
+data_input[21] => Mux6.IN6
+data_input[22] => Mux5.IN6
+data_input[23] => Mux4.IN6
+data_input[24] => Mux3.IN6
+data_input[25] => Mux2.IN6
+data_input[26] => Mux1.IN6
+data_input[27] => Mux0.IN6
+data_output[0] <= data_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+data_output[1] <= data_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+data_output[2] <= data_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+data_output[3] <= data_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+data_output[4] <= data_reg[4].DB_MAX_OUTPUT_PORT_TYPE
+data_output[5] <= data_reg[5].DB_MAX_OUTPUT_PORT_TYPE
+data_output[6] <= data_reg[6].DB_MAX_OUTPUT_PORT_TYPE
+data_output[7] <= data_reg[7].DB_MAX_OUTPUT_PORT_TYPE
+data_output[8] <= data_reg[8].DB_MAX_OUTPUT_PORT_TYPE
+data_output[9] <= data_reg[9].DB_MAX_OUTPUT_PORT_TYPE
+data_output[10] <= data_reg[10].DB_MAX_OUTPUT_PORT_TYPE
+data_output[11] <= data_reg[11].DB_MAX_OUTPUT_PORT_TYPE
+data_output[12] <= data_reg[12].DB_MAX_OUTPUT_PORT_TYPE
+data_output[13] <= data_reg[13].DB_MAX_OUTPUT_PORT_TYPE
+data_output[14] <= data_reg[14].DB_MAX_OUTPUT_PORT_TYPE
+data_output[15] <= data_reg[15].DB_MAX_OUTPUT_PORT_TYPE
+data_output[16] <= data_reg[16].DB_MAX_OUTPUT_PORT_TYPE
+data_output[17] <= data_reg[17].DB_MAX_OUTPUT_PORT_TYPE
+data_output[18] <= data_reg[18].DB_MAX_OUTPUT_PORT_TYPE
+data_output[19] <= data_reg[19].DB_MAX_OUTPUT_PORT_TYPE
+data_output[20] <= data_reg[20].DB_MAX_OUTPUT_PORT_TYPE
+data_output[21] <= data_reg[21].DB_MAX_OUTPUT_PORT_TYPE
+data_output[22] <= data_reg[22].DB_MAX_OUTPUT_PORT_TYPE
+data_output[23] <= data_reg[23].DB_MAX_OUTPUT_PORT_TYPE
+data_output[24] <= data_reg[24].DB_MAX_OUTPUT_PORT_TYPE
+data_output[25] <= data_reg[25].DB_MAX_OUTPUT_PORT_TYPE
+data_output[26] <= data_reg[26].DB_MAX_OUTPUT_PORT_TYPE
+data_output[27] <= data_reg[27].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_TOP|my_top:my_top_instance|associative_buffer:associative_buffer_instance|register:last_read_index
+async_reset => data_reg[0].ACLR
+async_reset => data_reg[1].ACLR
+async_reset => data_reg[2].ACLR
+async_reset => data_reg[3].ACLR
+clk => data_reg[0].CLK
+clk => data_reg[1].CLK
+clk => data_reg[2].CLK
+clk => data_reg[3].CLK
+ctrl[0] => Mux0.IN5
+ctrl[0] => Mux1.IN5
+ctrl[0] => Mux2.IN5
+ctrl[0] => Mux3.IN5
+ctrl[1] => Mux0.IN4
+ctrl[1] => Mux1.IN4
+ctrl[1] => Mux2.IN4
+ctrl[1] => Mux3.IN4
+ctrl[2] => Mux0.IN3
+ctrl[2] => Mux1.IN3
+ctrl[2] => Mux2.IN3
+ctrl[2] => Mux3.IN3
+data_input[0] => Mux3.IN6
+data_input[1] => Mux2.IN6
+data_input[2] => Mux1.IN6
+data_input[3] => Mux0.IN6
+data_output[0] <= data_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+data_output[1] <= data_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+data_output[2] <= data_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+data_output[3] <= data_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+
+

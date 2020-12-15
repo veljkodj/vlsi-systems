@@ -217,8 +217,8 @@ module DE0_TOP
 	my_top_instance
 		(
 			.clk(CLOCK_50),
-			.async_reset(SW[9]),
-			.ctrl_input(BUTTON ^ 3'b111),
+			.rst(SW[9]),
+			.buttons(BUTTON ^ 3'b111),
 			.key_input(SW[5 : 3]),
 			.data_input(SW[2 : 0]),
 			.data_output(LEDG[2 : 0]),
