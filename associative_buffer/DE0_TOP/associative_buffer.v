@@ -204,7 +204,7 @@ module associative_buffer
 			if (hit_occured == 1'b1) begin
 				
 				for (i = 0; i < NUM_DATA; i = i + 1)
-					if (lru_data_output[hit_index] > lru_data_output[i])
+					if (lru_data_output[i] > lru_data_output[hit_index])
 						lru_ctrl[i] <= `REG_CTRL_DEC;
 							
 				lru_data_input[hit_index] <= {(NUM_DATA_LOG2){1'b1}};
