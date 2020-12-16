@@ -9,42 +9,6 @@ module my_top
 		output [15 : 0] power_level_7seg_output
 	);
 	
-	wire [1 : 0] surface_toggle_deb;
-	
-	debouncer debouncer_surface_toggle_0
-	(
-		.async_reset(async_reset),
-		.clk(clk),
-		.signal_input(surface_toggle[0]),
-		.signal_output(surface_toggle_deb[0])
-	);
-	
-	debouncer debouncer_surface_toggle_1
-	(
-		.async_reset(async_reset),
-		.clk(clk),
-		.signal_input(surface_toggle[1]),
-		.signal_output(surface_toggle_deb[1])
-	);
-	
-	wire [1 : 0] surface_toggle_red;
-	
-	rising_edge_detector rising_edge_detector_surface_toggle_0
-		(
-			.async_reset(async_reset),
-			.clk(clk),
-			.signal_input(surface_toggle_deb[0]),
-			.signal_output(surface_toggle_red[0])
-		);
-		
-	rising_edge_detector rising_edge_detector_surface_toggle_1
-		(
-			.async_reset(async_reset),
-			.clk(clk),
-			.signal_input(surface_toggle_deb[1]),
-			.signal_output(surface_toggle_red[1])
-		);
-	
 	wire power_toggle_red;
 	
 	rising_edge_detector rising_edge_detector_power_toggle
@@ -54,6 +18,30 @@ module my_top
 			.signal_input(power_toggle),
 			.signal_output(power_toggle_red)
 		);
+		
+	wire [1 : 0] surface_toggle_deb;
+	wire [1 : 0] surface_toggle_red;	
+	
+	genvar i;
+	generate 
+		for (i = 0; i < 2; i = i + 1) begin: debouncer_generate_block
+			debouncer debouncer_surface_toggle
+			(
+				.async_reset(async_reset),
+				.clk(clk),
+				.signal_input(surface_toggle[i]),
+				.signal_output(surface_toggle_deb[i])
+			);
+
+			rising_edge_detector rising_edge_detector_surface_toggle
+			(
+				.async_reset(async_reset),
+				.clk(clk),
+				.signal_input(surface_toggle_deb[i]),
+				.signal_output(surface_toggle_red[i])
+			);
+		end
+	endgenerate
 		
 	wire power_level_inc_red;
 	
@@ -82,7 +70,7 @@ module my_top
 		.async_reset(async_reset),
 		.clk(clk),
 		.power_toggle(power_toggle_red),
-		.surface_toggle({surface_toggle_red[1], surface_toggle_red[0]}),
+		.surface_toggle(surface_toggle_red[1 : 0]),
 		.power_level_inc(power_level_inc_red),
 		.power_level_dec(power_level_dec_red),
 		.power_level_7seg_output(power_level_7seg_output_stove_instance)

@@ -1,5 +1,0 @@
-
-State Machine - |DE0_TOP|my_top:my_top_instance|stove:stove_instance|state_reg
-Name state_reg.STATE_POWER_ON 
-state_reg.STATE_POWER_OFF 0 
-state_reg.STATE_POWER_ON 1 

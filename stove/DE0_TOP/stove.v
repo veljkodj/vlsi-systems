@@ -8,11 +8,11 @@ module stove
 		input [1 : 0] surface_toggle,
 		input power_level_inc,
 		input power_level_dec,
-		output reg [15 : 0] power_level_7seg_output //
+		output reg [15 : 0] power_level_7seg_output
 	);
 	
-	reg [(`REG_CTRL_WIDTH - 1) : 0] power_ctrl; //
-	reg power_data_input; //
+	reg [(`REG_CTRL_WIDTH - 1) : 0] power_ctrl;
+	reg power_data_input;
 	wire power_data_output;
 	
 	register
@@ -28,8 +28,8 @@ module stove
 			.data_output(power_data_output)
 		);
 		
-	reg [(`REG_CTRL_WIDTH - 1) : 0] selected_surface_ctrl; //
-	reg [1 : 0] selected_surface_data_input; //
+	reg [(`REG_CTRL_WIDTH - 1) : 0] selected_surface_ctrl;
+	reg [1 : 0] selected_surface_data_input;
 	wire [1 : 0] selected_surface_data_output;
 	
 	register
@@ -45,8 +45,8 @@ module stove
 			.data_output(selected_surface_data_output)
 		);
 		
-	reg [(`REG_CTRL_WIDTH - 1) : 0] power_level_A_ctrl; //
-	reg [3 : 0] power_level_A_data_input; //
+	reg [(`REG_CTRL_WIDTH - 1) : 0] power_level_A_ctrl;
+	reg [3 : 0] power_level_A_data_input;
 	wire [3 : 0] power_level_A_data_output;
 	
 	register
@@ -62,8 +62,8 @@ module stove
 			.data_output(power_level_A_data_output)
 		);
 		
-	reg [(`REG_CTRL_WIDTH - 1) : 0] power_level_B_ctrl; //
-	reg [3 : 0] power_level_B_data_input; //
+	reg [(`REG_CTRL_WIDTH - 1) : 0] power_level_B_ctrl;
+	reg [3 : 0] power_level_B_data_input; 
 	wire [3 : 0] power_level_B_data_output;
 	
 	register
@@ -82,7 +82,7 @@ module stove
 	localparam STATE_POWER_OFF = 2'b00;
 	localparam STATE_POWER_ON = 2'b01;
 		
-	reg [1 : 0] state_next, state_reg; //
+	reg [1 : 0] state_next, state_reg;
 	
 	always @(negedge async_reset, posedge clk) begin
 		if (!async_reset) begin
@@ -160,13 +160,13 @@ module stove
 					
 				end
 				
+				
+				
 				if (power_toggle == 1'b1) begin
 					state_next <= STATE_POWER_OFF;
 				end
 				
-				power_level_7seg_output <= 16'h0000;
-				
-				// power_level_7seg_output <= {selected_surface_data_output & 2'b10 ? 1'b0 : 1'b1, encode(power_level_B_data_output), selected_surface_data_output & 2'b01 ? 1'b0 : 1'b1, encode(power_level_A_data_output)};
+				power_level_7seg_output <= {selected_surface_data_output & 2'b10 ? 1'b0 : 1'b1, encode(power_level_B_data_output), selected_surface_data_output & 2'b01 ? 1'b0 : 1'b1, encode(power_level_A_data_output)};
 				
 			end
 		endcase
@@ -179,16 +179,16 @@ module stove
 		);
 	begin
 		case (digit)
-			4'b0000: encode = 7'hC0;
-			4'b0001: encode = 7'hF9;
-			4'b0010: encode = 7'hA4;
-			4'b0011: encode = 7'hB0;
-			4'b0100: encode = 7'h99;
-			4'b0101: encode = 7'h92;
-			4'b0110: encode = 7'h82;
-			4'b0111: encode = 7'hF8;
-			4'b1000: encode = 7'h80;
-			4'b1001: encode = 7'h90;
+			4'b0000: encode = 7'h40;
+			4'b0001: encode = 7'h79;
+			4'b0010: encode = 7'h24;
+			4'b0011: encode = 7'h30;
+			4'b0100: encode = 7'h19;
+			4'b0101: encode = 7'h12;
+			4'b0110: encode = 7'h02;
+			4'b0111: encode = 7'h78;
+			4'b1000: encode = 7'h00;
+			4'b1001: encode = 7'h10;
 		endcase
 	end
 	endfunction

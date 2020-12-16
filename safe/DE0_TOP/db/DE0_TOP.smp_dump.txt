@@ -1,6 +1,0 @@
-
-State Machine - |DE0_TOP|my_top:my_top_instance|safe:safe_instance|state_reg
-Name state_reg.PIN_SETUP state_reg.UNLOCKED state_reg.LOCKED 
-state_reg.PIN_SETUP 0 0 0 
-state_reg.LOCKED 1 0 1 
-state_reg.UNLOCKED 1 1 0 

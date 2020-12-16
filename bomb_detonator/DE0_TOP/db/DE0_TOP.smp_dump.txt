@@ -1,7 +1,0 @@
-
-State Machine - |DE0_TOP|my_top:my_top_instance|bomb_controller:bomb_controller_instance|state_reg
-Name state_reg.STATE_FREEZE state_reg.STATE_BOOM state_reg.STATE_COUNTING state_reg.00 
-state_reg.00 0 0 0 0 
-state_reg.STATE_COUNTING 0 0 1 1 
-state_reg.STATE_BOOM 0 1 0 1 
-state_reg.STATE_FREEZE 1 0 0 1 
