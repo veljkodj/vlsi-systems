@@ -1,0 +1,158 @@
+`include "register.vh"
+
+module bomb_controller
+	(
+		input async_reset,
+		input clk,
+		input start_trigger,
+		input [2 : 0] switches,
+		output [31 : 0] sevenseg_output //
+	);
+	
+	reg [(`REG_CTRL_WIDTH - 1) : 0] countdown_ctrl; //
+	reg [15 : 0] countdown_data_input; //
+	wire [15 : 0] countdown_data_output;
+	
+	register
+	#(
+		.WIDTH(16)
+	)
+	countdown
+	(
+		.async_reset(async_reset),
+		.clk(clk),
+		.ctrl(countdown_ctrl),
+		.data_input(countdown_data_input),
+		.data_output(countdown_data_output)
+	);
+	
+	genvar i;
+	generate
+		for (i = 0; i < 4; i = i + 1) begin
+			wire digit = countdown_data_output / (10 ** i) % 10;
+		end
+	endgenerate
+	
+	wire digit0 = countdown_data_output / 10 ** i % 10;
+	
+	localparam _500ms = 28'h17D_7840;
+	localparam _1000ms = 28'h2FA_F080;
+	
+	reg [(`REG_CTRL_WIDTH - 1) : 0] timer_ctrl; //
+	reg [27 : 0] timer_data_input; //
+	wire [27 : 0] timer_data_output;
+	
+	register
+	#(
+		.WIDTH(28)
+	)
+	timer
+	(
+		.async_reset(async_reset),
+		.clk(clk),
+		.ctrl(timer_ctrl),
+		.data_input(timer_data_input),
+		.data_output(timer_data_output)
+	);
+	
+	reg [(`REG_CTRL_WIDTH - 1) : 0] active_digits_ctrl; //
+	reg [3 : 0] active_digits_data_input; //
+	wire [3 : 0] active_digits_data_output;
+	
+	register
+	#(
+		.WIDTH(4)
+	)
+	active_digits
+	(
+		.async_reset(async_reset),
+		.clk(clk),
+		.ctrl(active_digits_ctrl),
+		.data_input(active_digits_data_input),
+		.data_output(active_digits_data_output)
+	);
+	
+	localparam STATE_SETUP = 2'b00;
+	localparam STATE_COUNTING = 2'b01;
+	localparam STATE_BOOM = 2'b10;
+	
+	reg [1 : 0] state_reg;
+	reg [1 : 0] state_next; //
+	
+	always @(negedge async_reset, posedge clk) begin
+		if (!async_reset) begin
+			state_reg <= 2'b00;
+		end else begin
+			state_reg <= state_next;
+		end
+	end
+	
+	always @(*) begin
+	
+		countdown_ctrl <= `REG_CTRL_NOP;
+		countdown_data_input <= {16{1'b0}};
+		
+		timer_ctrl <= `REG_CTRL_NOP;
+		timer_data_input <= {28{1'b0}};
+		
+		active_digits_ctrl <= `REG_CTRL_NOP;
+		active_digits_data_input <= {4{1'b0}};
+		
+		state_next <= state_reg;
+		
+		sevenseg_output <= {32{1'b1}};
+		
+		case (state_reg)
+		
+			STATE_SETUP: begin
+				
+				if (start_trigger == 1'b1) begin
+					
+					if (switches[2] == 1'b1) begin
+						active_digits_data_input <= 3'b1111;
+						countdown_data_input <= 16'd9999;
+					end else if (switches[1] == 1'b1) begin
+						active_digits_data_input <= 3'b0111;
+						countdown_data_input <= 16'd999;
+					end else if (switches[0] == 1'b1) begin
+						active_digits_data_input <= 3'b0011;
+						countdown_data_input <= 16'd99;
+					end else begin
+						active_digits_data_input <= 3'b0001;
+						countdown_data_input <= 16'd9;
+					end
+					active_digits_ctrl <= `REG_CTRL_LD;
+					countdown_ctrl <= `REG_CTRL_LD;
+					
+					timer_data_input <= {28{1'b0}};
+					timer_ctrl <= `REG_CTRL_LD;
+					
+					state_next <= STATE_COUNTING;
+				
+				end
+				
+			end
+			
+			STATE_COUNTING: begin
+			
+				if (timer_data_output == _1000ms) begin
+				
+					timer_ctrl <= `REG_CTRL_CLR;
+					countdown_ctrl <= `REG_CTRL_DEC;
+					
+					if (countdown_data_output == 0) begin
+						countdown_ctrl <= `REG_CTRL_NOP;
+						state_next <= STATE_BOOM;
+					end
+					
+				end else begin
+					timer_ctrl <= `REG_CTRL_INC;
+				end
+			
+			end
+		
+		endcase
+	
+	end
+	
+endmodule
