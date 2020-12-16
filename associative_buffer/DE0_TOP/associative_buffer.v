@@ -202,40 +202,49 @@ module associative_buffer
 			end
 		
 			if (hit_occured == 1'b1) begin
+			
+				if (ctrl != `REG_CTRL_NOP) begin
 				
-				for (i = 0; i < NUM_DATA; i = i + 1)
-					if (lru_data_output[i] > lru_data_output[hit_index])
-						lru_ctrl[i] <= `REG_CTRL_DEC;
-							
-				lru_data_input[hit_index] <= {(NUM_DATA_LOG2){1'b1}};
-				lru_ctrl[hit_index] <= `REG_CTRL_LD;
-				
-				if (ctrl != `REG_CTRL_NOP)
+					for (i = 0; i < NUM_DATA; i = i + 1)
+						if (lru_data_output[i] > lru_data_output[hit_index])
+							lru_ctrl[i] <= `REG_CTRL_DEC;
+								
+					lru_data_input[hit_index] <= {(NUM_DATA_LOG2){1'b1}};
+					lru_ctrl[hit_index] <= `REG_CTRL_LD;
+					
 					data_ctrl[hit_index] <= ctrl;
+				
+				end
+				
 				data_output <= data_data_output[hit_index];
 				data_valid_output <= 1'b1;
 			
 			end else begin // hit_occured == 1'b0
 			
-				begin: find_lru_index
-				for (i = 0; i < NUM_DATA; i = i + 1)
-					if (lru_data_output[i] == {NUM_DATA_LOG2{1'b0}}) begin
-						lru_index = i[(NUM_DATA_LOG2 - 1) : 0];
-						disable find_lru_index;
-					end
-				end;
+				if (ctrl != `REG_CTRL_NOP) begin
 			
-				for (i = 0; i < NUM_DATA; i = i + 1)
-					if (lru_data_output[i] > lru_data_output[lru_index]) 
-						lru_ctrl[i] <= `REG_CTRL_DEC;
+					begin: find_lru_index
+					for (i = 0; i < NUM_DATA; i = i + 1)
+						if (lru_data_output[i] == {NUM_DATA_LOG2{1'b0}}) begin
+							lru_index = i[(NUM_DATA_LOG2 - 1) : 0];
+							disable find_lru_index;
+						end
+					end;
 				
-				valid_data_input[lru_index] <= 1'b1;
-				valid_ctrl[lru_index] <= `REG_CTRL_LD;
-				key_ctrl[lru_index] <= `REG_CTRL_LD;
-				if (ctrl != `REG_CTRL_NOP)
+					for (i = 0; i < NUM_DATA; i = i + 1)
+						if (lru_data_output[i] > lru_data_output[lru_index]) 
+							lru_ctrl[i] <= `REG_CTRL_DEC;
+					
+					valid_data_input[lru_index] <= 1'b1;
+					valid_ctrl[lru_index] <= `REG_CTRL_LD;
+					key_ctrl[lru_index] <= `REG_CTRL_LD;
+					
 					data_ctrl[lru_index] <= ctrl;
-				lru_data_input[lru_index] <= {NUM_DATA_LOG2{1'b1}};
-				lru_ctrl[lru_index] <= `REG_CTRL_LD;
+					
+					lru_data_input[lru_index] <= {NUM_DATA_LOG2{1'b1}};
+					lru_ctrl[lru_index] <= `REG_CTRL_LD;
+				
+				end
 				
 			end
 			
@@ -274,7 +283,7 @@ module associative_buffer
 				valid_data_index = {NUM_DATA_LOG2{1'b0}};
 				begin: check_if_more_valid_data_exist
 				for (i = 0; i < NUM_DATA; i = i + 1) begin
-					if (valid_data_output[i] == 1'b1 && i > last_read_index_data_output) begin
+					if (valid_data_output[i] == 1'b1 && last_read_index_data_output < i) begin
 						valid_data_found = 1;
 						valid_data_index = i[(NUM_DATA_LOG2 - 1) : 0];
 						disable check_if_more_valid_data_exist;

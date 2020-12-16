@@ -212,7 +212,7 @@ module DE0_TOP
 		#(
 			.KEY_WIDTH(3),
 			.DATA_WIDTH(3),
-			.DATA_NUMBER_LOG2(4)
+			.DATA_NUMBER_LOG2(2)
 		)
 	my_top_instance
 		(
@@ -223,7 +223,7 @@ module DE0_TOP
 			.data_input(SW[2 : 0]),
 			.data_output(LEDG[2 : 0]),
 			.data_valid(LEDG[9]),
-			.trigger_display(SW[8])
+			.trigger_display(SW[8]) // if set, device will continuously show data in the buffer
 		);
 
 endmodule
