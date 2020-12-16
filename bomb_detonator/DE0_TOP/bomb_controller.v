@@ -7,12 +7,12 @@ module bomb_controller
 		input start_trigger,
 		input [2 : 0] switches,
 		input [2 : 0] buttons,
-		output reg [31 : 0] sevenseg_output, //
-		output reg [3 : 0] led_output //
+		output reg [31 : 0] sevenseg_output, 
+		output reg [3 : 0] led_output 
 	);
 	
-	reg [(`REG_CTRL_WIDTH - 1) : 0] countdown_ctrl; //
-	reg [15 : 0] countdown_data_input; //
+	reg [(`REG_CTRL_WIDTH - 1) : 0] countdown_ctrl; 
+	reg [15 : 0] countdown_data_input; 
 	wire [15 : 0] countdown_data_output;
 	
 	register
@@ -31,8 +31,8 @@ module bomb_controller
 	localparam _500ms = 28'h17D_7840;
 	localparam _1000ms = 28'h2FA_F080;
 	
-	reg [(`REG_CTRL_WIDTH - 1) : 0] timer_ctrl; //
-	reg [27 : 0] timer_data_input; //
+	reg [(`REG_CTRL_WIDTH - 1) : 0] timer_ctrl; 
+	reg [27 : 0] timer_data_input; 
 	wire [27 : 0] timer_data_output;
 	
 	register
@@ -48,8 +48,8 @@ module bomb_controller
 		.data_output(timer_data_output)
 	);
 	
-	reg [(`REG_CTRL_WIDTH - 1) : 0] active_digits_ctrl; //
-	reg [3 : 0] active_digits_data_input; //
+	reg [(`REG_CTRL_WIDTH - 1) : 0] active_digits_ctrl; 
+	reg [3 : 0] active_digits_data_input; 
 	wire [3 : 0] active_digits_data_output;
 	
 	register
@@ -65,8 +65,8 @@ module bomb_controller
 		.data_output(active_digits_data_output)
 	);
 	
-	reg [(`REG_CTRL_WIDTH - 1) : 0] led_ctrl; //
-	reg [3 : 0] led_data_input; //
+	reg [(`REG_CTRL_WIDTH - 1) : 0] led_ctrl; 
+	reg [3 : 0] led_data_input; 
 	wire [3 : 0] led_data_output;
 	
 	register
@@ -82,8 +82,8 @@ module bomb_controller
 		.data_output(led_data_output)
 	);
 	
-	reg [(`REG_CTRL_WIDTH - 1) : 0] password_ctrl [7 : 0]; //
-	reg [1 : 0] password_data_input [7 : 0]; //
+	reg [(`REG_CTRL_WIDTH - 1) : 0] password_ctrl [7 : 0]; 
+	reg [1 : 0] password_data_input [7 : 0]; 
 	wire [1 : 0] password_data_output [7 : 0];
 	
 	genvar i;
@@ -104,8 +104,8 @@ module bomb_controller
 	end
 	endgenerate
 	
-	reg [(`REG_CTRL_WIDTH - 1) : 0] pass_length_ctrl; //
-	reg [3 : 0] pass_length_data_input; //
+	reg [(`REG_CTRL_WIDTH - 1) : 0] pass_length_ctrl; 
+	reg [3 : 0] pass_length_data_input; 
 	wire [3 : 0] pass_length_data_output;
 	
 	register
@@ -121,8 +121,8 @@ module bomb_controller
 		.data_output(pass_length_data_output)
 	);
 	
-	reg [(`REG_CTRL_WIDTH - 1) : 0] try_ctrl [7 : 0]; //
-	reg [1 : 0] try_data_input [7 : 0]; //
+	reg [(`REG_CTRL_WIDTH - 1) : 0] try_ctrl [7 : 0]; 
+	reg [1 : 0] try_data_input [7 : 0]; 
 	wire [1 : 0] try_data_output [7 : 0];
 	
 	generate 
@@ -142,8 +142,8 @@ module bomb_controller
 	end
 	endgenerate
 	
-	reg [(`REG_CTRL_WIDTH - 1) : 0] try_length_ctrl; //
-	reg [3 : 0] try_length_data_input; //
+	reg [(`REG_CTRL_WIDTH - 1) : 0] try_length_ctrl; 
+	reg [3 : 0] try_length_data_input; 
 	wire [3 : 0] try_length_data_output;
 	
 	register
@@ -165,7 +165,7 @@ module bomb_controller
 	localparam STATE_FREEZE = 2'b11;
 	
 	reg [1 : 0] state_reg;
-	reg [1 : 0] state_next; //
+	reg [1 : 0] state_next; 
 	
 	always @(negedge async_reset, posedge clk) begin
 		if (!async_reset) begin
@@ -347,6 +347,8 @@ module bomb_controller
 				for (i = 0; i < 4; i = i + 1) begin
 					sevenseg_output[(i + 1) * 8 - 1 -: 8] <= active_digits_data_output & (1 << i) ? (timer_data_output <= _500ms ? 8'hBF : 8'hFF) : 8'hFF;
 				end
+				
+				led_output <= led_data_output;
 				
 			end
 			

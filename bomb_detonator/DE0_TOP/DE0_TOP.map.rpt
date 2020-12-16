@@ -1,6 +1,6 @@
 Analysis & Synthesis report for DE0_TOP
-Wed Dec 16 12:25:56 2020
-Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Wed Dec 16 13:09:17 2020
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
 ---------------------
@@ -93,24 +93,24 @@ applicable agreement for further details.
 
 
 
-+--------------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                         ;
-+------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Dec 16 12:25:55 2020           ;
-; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
-; Revision Name                      ; DE0_TOP                                         ;
-; Top-level Entity Name              ; DE0_TOP                                         ;
-; Family                             ; Cyclone III                                     ;
-; Total logic elements               ; 1,268                                           ;
-;     Total combinational functions  ; 1,245                                           ;
-;     Dedicated logic registers      ; 102                                             ;
-; Total registers                    ; 102                                             ;
-; Total pins                         ; 252                                             ;
-; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 0                                               ;
-; Embedded Multiplier 9-bit elements ; 0                                               ;
-; Total PLLs                         ; 0                                               ;
-+------------------------------------+-------------------------------------------------+
++---------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                    ;
++------------------------------------+--------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed Dec 16 13:09:17 2020      ;
+; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Revision Name                      ; DE0_TOP                                    ;
+; Top-level Entity Name              ; DE0_TOP                                    ;
+; Family                             ; Cyclone III                                ;
+; Total logic elements               ; 1,270                                      ;
+;     Total combinational functions  ; 1,247                                      ;
+;     Dedicated logic registers      ; 102                                        ;
+; Total registers                    ; 102                                        ;
+; Total pins                         ; 252                                        ;
+; Total virtual pins                 ; 0                                          ;
+; Total memory bits                  ; 0                                          ;
+; Embedded Multiplier 9-bit elements ; 0                                          ;
+; Total PLLs                         ; 0                                          ;
++------------------------------------+--------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------+
@@ -211,34 +211,34 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                              ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                          ; Library ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------+---------+
-; my_top.v                         ; yes             ; User Verilog HDL File        ; D:/Drive/Projects/VLSI/vlsi-systems/bomb_detonator/DE0_TOP/my_top.v                   ;         ;
-; bomb_controller.v                ; yes             ; User Verilog HDL File        ; D:/Drive/Projects/VLSI/vlsi-systems/bomb_detonator/DE0_TOP/bomb_controller.v          ;         ;
-; rising_edge_detector.v           ; yes             ; User Verilog HDL File        ; D:/Drive/Projects/VLSI/vlsi-systems/bomb_detonator/DE0_TOP/rising_edge_detector.v     ;         ;
-; register.v                       ; yes             ; User Verilog HDL File        ; D:/Drive/Projects/VLSI/vlsi-systems/bomb_detonator/DE0_TOP/register.v                 ;         ;
-; DE0_TOP.v                        ; yes             ; User Verilog HDL File        ; D:/Drive/Projects/VLSI/vlsi-systems/bomb_detonator/DE0_TOP/DE0_TOP.v                  ;         ;
-; register.vh                      ; yes             ; Auto-Found Unspecified File  ; D:/Drive/Projects/VLSI/vlsi-systems/bomb_detonator/DE0_TOP/register.vh                ;         ;
-; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_divide.tdf                      ;         ;
-; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/abs_divider.inc                     ;         ;
-; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/sign_div_unsign.inc                 ;         ;
-; aglobal130.inc                   ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc                      ;         ;
-; db/lpm_divide_s9m.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/Drive/Projects/VLSI/vlsi-systems/bomb_detonator/DE0_TOP/db/lpm_divide_s9m.tdf      ;         ;
-; db/sign_div_unsign_qlh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/Drive/Projects/VLSI/vlsi-systems/bomb_detonator/DE0_TOP/db/sign_div_unsign_qlh.tdf ;         ;
-; db/alt_u_div_v5f.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/Drive/Projects/VLSI/vlsi-systems/bomb_detonator/DE0_TOP/db/alt_u_div_v5f.tdf       ;         ;
-; db/add_sub_unc.tdf               ; yes             ; Auto-Generated Megafunction  ; D:/Drive/Projects/VLSI/vlsi-systems/bomb_detonator/DE0_TOP/db/add_sub_unc.tdf         ;         ;
-; db/add_sub_vnc.tdf               ; yes             ; Auto-Generated Megafunction  ; D:/Drive/Projects/VLSI/vlsi-systems/bomb_detonator/DE0_TOP/db/add_sub_vnc.tdf         ;         ;
-; db/lpm_divide_phm.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/Drive/Projects/VLSI/vlsi-systems/bomb_detonator/DE0_TOP/db/lpm_divide_phm.tdf      ;         ;
-; db/lpm_divide_shm.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/Drive/Projects/VLSI/vlsi-systems/bomb_detonator/DE0_TOP/db/lpm_divide_shm.tdf      ;         ;
-; db/sign_div_unsign_tlh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/Drive/Projects/VLSI/vlsi-systems/bomb_detonator/DE0_TOP/db/sign_div_unsign_tlh.tdf ;         ;
-; db/alt_u_div_56f.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/Drive/Projects/VLSI/vlsi-systems/bomb_detonator/DE0_TOP/db/alt_u_div_56f.tdf       ;         ;
-; db/lpm_divide_6jm.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/Drive/Projects/VLSI/vlsi-systems/bomb_detonator/DE0_TOP/db/lpm_divide_6jm.tdf      ;         ;
-; db/sign_div_unsign_7nh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/Drive/Projects/VLSI/vlsi-systems/bomb_detonator/DE0_TOP/db/sign_div_unsign_7nh.tdf ;         ;
-; db/alt_u_div_p8f.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/Drive/Projects/VLSI/vlsi-systems/bomb_detonator/DE0_TOP/db/alt_u_div_p8f.tdf       ;         ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                      ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                  ; Library ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------+---------+
+; my_top.v                         ; yes             ; User Verilog HDL File        ; C:/Users/dv160276/Desktop/vlsi/vlsi-systems/bomb_detonator/DE0_TOP/my_top.v                   ;         ;
+; bomb_controller.v                ; yes             ; User Verilog HDL File        ; C:/Users/dv160276/Desktop/vlsi/vlsi-systems/bomb_detonator/DE0_TOP/bomb_controller.v          ;         ;
+; rising_edge_detector.v           ; yes             ; User Verilog HDL File        ; C:/Users/dv160276/Desktop/vlsi/vlsi-systems/bomb_detonator/DE0_TOP/rising_edge_detector.v     ;         ;
+; register.v                       ; yes             ; User Verilog HDL File        ; C:/Users/dv160276/Desktop/vlsi/vlsi-systems/bomb_detonator/DE0_TOP/register.v                 ;         ;
+; DE0_TOP.v                        ; yes             ; User Verilog HDL File        ; C:/Users/dv160276/Desktop/vlsi/vlsi-systems/bomb_detonator/DE0_TOP/DE0_TOP.v                  ;         ;
+; register.vh                      ; yes             ; Auto-Found Unspecified File  ; C:/Users/dv160276/Desktop/vlsi/vlsi-systems/bomb_detonator/DE0_TOP/register.vh                ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/program files/altera/13.1/quartus/libraries/megafunctions/lpm_divide.tdf                   ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/program files/altera/13.1/quartus/libraries/megafunctions/abs_divider.inc                  ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/program files/altera/13.1/quartus/libraries/megafunctions/sign_div_unsign.inc              ;         ;
+; aglobal131.inc                   ; yes             ; Megafunction                 ; c:/program files/altera/13.1/quartus/libraries/megafunctions/aglobal131.inc                   ;         ;
+; db/lpm_divide_s9m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/dv160276/Desktop/vlsi/vlsi-systems/bomb_detonator/DE0_TOP/db/lpm_divide_s9m.tdf      ;         ;
+; db/sign_div_unsign_qlh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/dv160276/Desktop/vlsi/vlsi-systems/bomb_detonator/DE0_TOP/db/sign_div_unsign_qlh.tdf ;         ;
+; db/alt_u_div_v5f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/dv160276/Desktop/vlsi/vlsi-systems/bomb_detonator/DE0_TOP/db/alt_u_div_v5f.tdf       ;         ;
+; db/add_sub_unc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/dv160276/Desktop/vlsi/vlsi-systems/bomb_detonator/DE0_TOP/db/add_sub_unc.tdf         ;         ;
+; db/add_sub_vnc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/dv160276/Desktop/vlsi/vlsi-systems/bomb_detonator/DE0_TOP/db/add_sub_vnc.tdf         ;         ;
+; db/lpm_divide_phm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/dv160276/Desktop/vlsi/vlsi-systems/bomb_detonator/DE0_TOP/db/lpm_divide_phm.tdf      ;         ;
+; db/lpm_divide_shm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/dv160276/Desktop/vlsi/vlsi-systems/bomb_detonator/DE0_TOP/db/lpm_divide_shm.tdf      ;         ;
+; db/sign_div_unsign_tlh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/dv160276/Desktop/vlsi/vlsi-systems/bomb_detonator/DE0_TOP/db/sign_div_unsign_tlh.tdf ;         ;
+; db/alt_u_div_56f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/dv160276/Desktop/vlsi/vlsi-systems/bomb_detonator/DE0_TOP/db/alt_u_div_56f.tdf       ;         ;
+; db/lpm_divide_6jm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/dv160276/Desktop/vlsi/vlsi-systems/bomb_detonator/DE0_TOP/db/lpm_divide_6jm.tdf      ;         ;
+; db/sign_div_unsign_7nh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/dv160276/Desktop/vlsi/vlsi-systems/bomb_detonator/DE0_TOP/db/sign_div_unsign_7nh.tdf ;         ;
+; db/alt_u_div_p8f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/dv160276/Desktop/vlsi/vlsi-systems/bomb_detonator/DE0_TOP/db/alt_u_div_p8f.tdf       ;         ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------+
@@ -246,16 +246,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 1,268          ;
+; Estimated Total logic elements              ; 1,270          ;
 ;                                             ;                ;
-; Total combinational functions               ; 1245           ;
+; Total combinational functions               ; 1247           ;
 ; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 331            ;
-;     -- 3 input functions                    ; 317            ;
-;     -- <=2 input functions                  ; 597            ;
+;     -- 4 input functions                    ; 335            ;
+;     -- 3 input functions                    ; 312            ;
+;     -- <=2 input functions                  ; 600            ;
 ;                                             ;                ;
 ; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 903            ;
+;     -- normal mode                          ; 905            ;
 ;     -- arithmetic mode                      ; 342            ;
 ;                                             ;                ;
 ; Total registers                             ; 102            ;
@@ -266,7 +266,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Embedded Multiplier 9-bit elements          ; 0              ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
 ; Maximum fan-out                             ; 102            ;
-; Total fan-out                               ; 4162           ;
+; Total fan-out                               ; 4169           ;
 ; Average fan-out                             ; 2.12           ;
 +---------------------------------------------+----------------+
 
@@ -276,9 +276,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                        ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                      ; Library Name ;
 +---------------------------------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |DE0_TOP                                                                                          ; 1245 (1)          ; 102 (0)      ; 0           ; 0            ; 0       ; 0         ; 252  ; 0            ; |DE0_TOP                                                                                                                                                                 ; work         ;
-;    |my_top:my_top_instance|                                                                       ; 1244 (0)          ; 102 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TOP|my_top:my_top_instance                                                                                                                                          ; work         ;
-;       |bomb_controller:bomb_controller_instance|                                                  ; 1241 (191)        ; 96 (4)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TOP|my_top:my_top_instance|bomb_controller:bomb_controller_instance                                                                                                 ; work         ;
+; |DE0_TOP                                                                                          ; 1247 (1)          ; 102 (0)      ; 0           ; 0            ; 0       ; 0         ; 252  ; 0            ; |DE0_TOP                                                                                                                                                                 ; work         ;
+;    |my_top:my_top_instance|                                                                       ; 1246 (0)          ; 102 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TOP|my_top:my_top_instance                                                                                                                                          ; work         ;
+;       |bomb_controller:bomb_controller_instance|                                                  ; 1243 (192)        ; 96 (4)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TOP|my_top:my_top_instance|bomb_controller:bomb_controller_instance                                                                                                 ; work         ;
 ;          |lpm_divide:Div0|                                                                        ; 160 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TOP|my_top:my_top_instance|bomb_controller:bomb_controller_instance|lpm_divide:Div0                                                                                 ; work         ;
 ;             |lpm_divide_phm:auto_generated|                                                       ; 160 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TOP|my_top:my_top_instance|bomb_controller:bomb_controller_instance|lpm_divide:Div0|lpm_divide_phm:auto_generated                                                   ; work         ;
 ;                |sign_div_unsign_qlh:divider|                                                      ; 160 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TOP|my_top:my_top_instance|bomb_controller:bomb_controller_instance|lpm_divide:Div0|lpm_divide_phm:auto_generated|sign_div_unsign_qlh:divider                       ; work         ;
@@ -319,7 +319,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;          |register:password_block_generate[5].password|                                           ; 0 (0)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TOP|my_top:my_top_instance|bomb_controller:bomb_controller_instance|register:password_block_generate[5].password                                                    ; work         ;
 ;          |register:password_block_generate[6].password|                                           ; 0 (0)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TOP|my_top:my_top_instance|bomb_controller:bomb_controller_instance|register:password_block_generate[6].password                                                    ; work         ;
 ;          |register:password_block_generate[7].password|                                           ; 0 (0)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TOP|my_top:my_top_instance|bomb_controller:bomb_controller_instance|register:password_block_generate[7].password                                                    ; work         ;
-;          |register:timer|                                                                         ; 31 (31)           ; 28 (28)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TOP|my_top:my_top_instance|bomb_controller:bomb_controller_instance|register:timer                                                                                  ; work         ;
+;          |register:timer|                                                                         ; 32 (32)           ; 28 (28)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TOP|my_top:my_top_instance|bomb_controller:bomb_controller_instance|register:timer                                                                                  ; work         ;
 ;          |register:try_block_generate[0].try|                                                     ; 0 (0)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TOP|my_top:my_top_instance|bomb_controller:bomb_controller_instance|register:try_block_generate[0].try                                                              ; work         ;
 ;          |register:try_block_generate[1].try|                                                     ; 0 (0)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TOP|my_top:my_top_instance|bomb_controller:bomb_controller_instance|register:try_block_generate[1].try                                                              ; work         ;
 ;          |register:try_block_generate[2].try|                                                     ; 0 (0)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_TOP|my_top:my_top_instance|bomb_controller:bomb_controller_instance|register:try_block_generate[2].try                                                              ; work         ;
@@ -381,15 +381,15 @@ Encoding Type:  One-Hot
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                               ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------+
 ; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_TOP|my_top:my_top_instance|bomb_controller:bomb_controller_instance|register:countdown|data_reg[15] ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |DE0_TOP|my_top:my_top_instance|bomb_controller:bomb_controller_instance|register:countdown|data_reg[5]  ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |DE0_TOP|my_top:my_top_instance|bomb_controller:bomb_controller_instance|register:countdown|data_reg[10] ;
 ; 4:1                ; 28 bits   ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |DE0_TOP|my_top:my_top_instance|bomb_controller:bomb_controller_instance|register:timer|data_reg[8]      ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |DE0_TOP|my_top:my_top_instance|bomb_controller:bomb_controller_instance|register:try_length|data_reg[3] ;
-; 5:1                ; 3 bits    ; 9 LEs         ; 3 LEs                ; 6 LEs                  ; Yes        ; |DE0_TOP|my_top:my_top_instance|bomb_controller:bomb_controller_instance|register:led|data_reg[2]        ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |DE0_TOP|my_top:my_top_instance|bomb_controller:bomb_controller_instance|password_ctrl[0][1]             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |DE0_TOP|my_top:my_top_instance|bomb_controller:bomb_controller_instance|register:try_length|data_reg[2] ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 3 LEs                ; 6 LEs                  ; Yes        ; |DE0_TOP|my_top:my_top_instance|bomb_controller:bomb_controller_instance|register:led|data_reg[1]        ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |DE0_TOP|my_top:my_top_instance|bomb_controller:bomb_controller_instance|password_ctrl[1][1]             ;
 ; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |DE0_TOP|my_top:my_top_instance|bomb_controller:bomb_controller_instance|countdown_data_input[9]         ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |DE0_TOP|my_top:my_top_instance|bomb_controller:bomb_controller_instance|try_length_ctrl[0]              ;
 ; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |DE0_TOP|my_top:my_top_instance|bomb_controller:bomb_controller_instance|try_ctrl[0][1]                  ;
-; 8:1                ; 4 bits    ; 20 LEs        ; 12 LEs               ; 8 LEs                  ; No         ; |DE0_TOP|my_top:my_top_instance|bomb_controller:bomb_controller_instance|Selector1                       ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 12 LEs               ; 8 LEs                  ; No         ; |DE0_TOP|my_top:my_top_instance|bomb_controller:bomb_controller_instance|Selector4                       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------+
 
 
@@ -1010,8 +1010,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
-    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Dec 16 12:25:50 2020
+    Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+    Info: Processing started: Wed Dec 16 13:09:13 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE0_TOP -c DE0_TOP
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file my_top.v
@@ -1063,9 +1063,9 @@ Info (12128): Elaborating entity "my_top" for hierarchy "my_top:my_top_instance"
 Info (12128): Elaborating entity "rising_edge_detector" for hierarchy "my_top:my_top_instance|rising_edge_detector:rising_edge_detector_block_generate[0].rising_edge_detector_instance"
 Info (12128): Elaborating entity "bomb_controller" for hierarchy "my_top:my_top_instance|bomb_controller:bomb_controller_instance"
 Warning (10230): Verilog HDL assignment warning at bomb_controller.v(294): truncated value with size 32 to match size of target (4)
-Warning (10270): Verilog HDL Case Statement warning at bomb_controller.v(372): incomplete case statement has no default case item
-Warning (10241): Verilog HDL Function Declaration warning at bomb_controller.v(367): function "encode" may return a Don't Care value because its output register may not be assigned a value in every possible path through the function
-Warning (10030): Net "encode" at bomb_controller.v(367) has no driver or initial value, using a default initial value '0'
+Warning (10270): Verilog HDL Case Statement warning at bomb_controller.v(374): incomplete case statement has no default case item
+Warning (10241): Verilog HDL Function Declaration warning at bomb_controller.v(369): function "encode" may return a Don't Care value because its output register may not be assigned a value in every possible path through the function
+Warning (10030): Net "encode" at bomb_controller.v(369) has no driver or initial value, using a default initial value '0'
 Info (12128): Elaborating entity "register" for hierarchy "my_top:my_top_instance|bomb_controller:bomb_controller_instance|register:countdown"
 Info (12128): Elaborating entity "register" for hierarchy "my_top:my_top_instance|bomb_controller:bomb_controller_instance|register:timer"
 Info (12128): Elaborating entity "register" for hierarchy "my_top:my_top_instance|bomb_controller:bomb_controller_instance|register:active_digits"
@@ -1345,7 +1345,7 @@ Info (17016): Found the following redundant logic cells in design
     Info (17048): Logic cell "my_top:my_top_instance|bomb_controller:bomb_controller_instance|lpm_divide:Mod3|lpm_divide_s9m:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_v5f:divider|add_sub_12_result_int[0]~10"
     Info (17048): Logic cell "my_top:my_top_instance|bomb_controller:bomb_controller_instance|lpm_divide:Mod3|lpm_divide_s9m:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_v5f:divider|add_sub_13_result_int[0]~10"
     Info (17048): Logic cell "my_top:my_top_instance|bomb_controller:bomb_controller_instance|lpm_divide:Mod3|lpm_divide_s9m:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_v5f:divider|add_sub_14_result_int[0]~10"
-Info (144001): Generated suppressed messages file D:/Drive/Projects/VLSI/vlsi-systems/bomb_detonator/DE0_TOP/DE0_TOP.map.smsg
+Info (144001): Generated suppressed messages file C:/Users/dv160276/Desktop/vlsi/vlsi-systems/bomb_detonator/DE0_TOP/DE0_TOP.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 14 input pin(s) that do not drive logic
@@ -1363,21 +1363,21 @@ Warning (21074): Design contains 14 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "GPIO0_CLKIN[1]"
     Warning (15610): No output dependent on input pin "GPIO1_CLKIN[0]"
     Warning (15610): No output dependent on input pin "GPIO1_CLKIN[1]"
-Info (21057): Implemented 1525 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1527 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 23 input pins
     Info (21059): Implemented 118 output pins
     Info (21060): Implemented 111 bidirectional pins
-    Info (21061): Implemented 1273 logic cells
+    Info (21061): Implemented 1275 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 249 warnings
-    Info: Peak virtual memory: 4645 megabytes
-    Info: Processing ended: Wed Dec 16 12:25:56 2020
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:05
+    Info: Peak virtual memory: 4653 megabytes
+    Info: Processing ended: Wed Dec 16 13:09:17 2020
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:04
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in D:/Drive/Projects/VLSI/vlsi-systems/bomb_detonator/DE0_TOP/DE0_TOP.map.smsg.
+The suppressed messages can be found in C:/Users/dv160276/Desktop/vlsi/vlsi-systems/bomb_detonator/DE0_TOP/DE0_TOP.map.smsg.
 
 
