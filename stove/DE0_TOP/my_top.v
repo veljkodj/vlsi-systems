@@ -62,6 +62,16 @@ module my_top
 			.signal_input(power_level_dec),
 			.signal_output(power_level_dec_red)
 		);
+		
+	wire rising_edge_timer_instance_signal_output;
+		
+	rising_edge_timer rising_edge_timer_instance
+	(
+		.async_reset(async_reset),
+		.clk(clk),
+		.signal_input({power_level_inc, power_level_dec}),
+		.signal_output(rising_edge_timer_instance_signal_output)
+	);
 	
 	wire [15 : 0] power_level_7seg_output_stove_instance;
 	
@@ -73,6 +83,7 @@ module my_top
 		.surface_toggle(surface_toggle_red[1 : 0]),
 		.power_level_inc(power_level_inc_red),
 		.power_level_dec(power_level_dec_red),
+		.three_seconds_push(rising_edge_timer_instance_signal_output),
 		.power_level_7seg_output(power_level_7seg_output_stove_instance)
 	);
 	

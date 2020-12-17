@@ -8,6 +8,7 @@ module stove
 		input [1 : 0] surface_toggle,
 		input power_level_inc,
 		input power_level_dec,
+		input three_seconds_push,
 		output reg [15 : 0] power_level_7seg_output
 	);
 	
@@ -79,10 +80,118 @@ module stove
 			.data_output(power_level_B_data_output)
 		);
 		
-	localparam STATE_POWER_OFF = 2'b00;
-	localparam STATE_POWER_ON = 2'b01;
+	reg [(`REG_CTRL_WIDTH - 1) : 0] security_lock_ctrl;
+	reg security_lock_data_input; 
+	wire security_lock_data_output;
+	
+	register
+		#(
+			.WIDTH(1)
+		)
+	security_lock
+		(
+			.async_reset(async_reset),
+			.clk(clk),
+			.ctrl(security_lock_ctrl),
+			.data_input(security_lock_data_input),
+			.data_output(security_lock_data_output)
+		);
 		
-	reg [1 : 0] state_next, state_reg;
+	localparam ONE_SECOND = 50_000_000;
+		
+	reg [(`REG_CTRL_WIDTH - 1) : 0] timer_ctrl;
+	reg [27 : 0] timer_data_input; 
+	wire [27 : 0] timer_data_output;
+	
+	register
+		#(
+			.WIDTH(28)
+		)
+	timer
+		(
+			.async_reset(async_reset),
+			.clk(clk),
+			.ctrl(timer_ctrl),
+			.data_input(timer_data_input),
+			.data_output(timer_data_output)
+		);
+		
+	reg [(`REG_CTRL_WIDTH - 1) : 0] A_timer_ctrl;
+	reg [31 : 0] A_timer_data_input; 
+	wire [31 : 0] A_timer_data_output;
+	
+	register
+		#(
+			.WIDTH(32)
+		)
+	A_timer
+		(
+			.async_reset(async_reset),
+			.clk(clk),
+			.ctrl(A_timer_ctrl),
+			.data_input(A_timer_data_input),
+			.data_output(A_timer_data_output)
+		);
+		
+	reg [(`REG_CTRL_WIDTH - 1) : 0] A_recently_on_ctrl;
+	reg A_recently_on_data_input; 
+	wire A_recently_on_data_output;
+	
+	register
+		#(
+			.WIDTH(1)
+		)
+	A_recently_on
+		(
+			.async_reset(async_reset),
+			.clk(clk),
+			.ctrl(A_recently_on_ctrl),
+			.data_input(A_recently_on_data_input),
+			.data_output(A_recently_on_data_output)
+		);
+		
+	reg [(`REG_CTRL_WIDTH - 1) : 0] B_timer_ctrl;
+	reg [31 : 0] B_timer_data_input; 
+	wire [31 : 0] B_timer_data_output;
+	
+	register
+		#(
+			.WIDTH(32)
+		)
+	B_timer
+		(
+			.async_reset(async_reset),
+			.clk(clk),
+			.ctrl(B_timer_ctrl),
+			.data_input(B_timer_data_input),
+			.data_output(B_timer_data_output)
+		);
+		
+	reg [(`REG_CTRL_WIDTH - 1) : 0] B_recently_on_ctrl;
+	reg B_recently_on_data_input; 
+	wire B_recently_on_data_output;
+	
+	register
+		#(
+			.WIDTH(1)
+		)
+	B_recently_on
+		(
+			.async_reset(async_reset),
+			.clk(clk),
+			.ctrl(B_recently_on_ctrl),
+			.data_input(B_recently_on_data_input),
+			.data_output(B_recently_on_data_output)
+		);
+		
+	localparam STATE_POWER_OFF = 3'b000;
+	localparam STATE_POWER_ON = 3'b001;
+	localparam STATE_SECOND_STEP_TO_LOCK = 3'b010;
+	localparam STATE_2SEC_LL = 3'b011;
+	localparam STATE_SECOND_STEP_TO_UNLOCK = 3'b100;
+	localparam STATE_10SEC_HH = 3'b101;
+		
+	reg [2 : 0] state_next, state_reg;
 	
 	always @(negedge async_reset, posedge clk) begin
 		if (!async_reset) begin
@@ -105,6 +214,24 @@ module stove
 		
 		power_level_B_data_input <= 4'b0000;
 		power_level_B_ctrl <= `REG_CTRL_NOP;
+		
+		security_lock_data_input <= 1'b0;
+		security_lock_ctrl <= `REG_CTRL_NOP;
+		
+		timer_data_input <= {28{1'b0}};
+		timer_ctrl <= `REG_CTRL_NOP;
+		
+		A_timer_data_input <= {32{1'b0}};
+		A_timer_ctrl <= `REG_CTRL_NOP;
+		
+		A_recently_on_data_input <= 1'b0;
+		A_recently_on_ctrl <= `REG_CTRL_NOP;
+		
+		B_timer_data_input <= {32{1'b0}};
+		B_timer_ctrl <= `REG_CTRL_NOP;
+		
+		B_recently_on_data_input <= 1'b0;
+		B_recently_on_ctrl <= `REG_CTRL_NOP;
 	
 		state_next <= state_reg;
 	
@@ -140,35 +267,147 @@ module stove
 					selected_surface_ctrl <= `REG_CTRL_LD;
 				end
 				
-				if (power_level_inc == 1'b1) begin
+				if (security_lock_data_output == 1'b0 && power_level_inc == 1'b1) begin
 					
-					if (selected_surface_data_output & 2'b01 && power_level_A_data_output < 4'd9)
+					if (selected_surface_data_output & 2'b01 && power_level_A_data_output < 4'd9) begin
 						power_level_A_ctrl <= `REG_CTRL_INC;
+						A_recently_on_data_input <= 1'b0;
+						A_recently_on_ctrl <= `REG_CTRL_LD;
+						A_timer_ctrl <= `REG_CTRL_CLR;
+					end
 						
-					if (selected_surface_data_output & 2'b10 && power_level_B_data_output < 4'd9)
+					if (selected_surface_data_output & 2'b10 && power_level_B_data_output < 4'd9) begin
 						power_level_B_ctrl <= `REG_CTRL_INC;
+						B_recently_on_data_input <= 1'b0;
+						B_recently_on_ctrl <= `REG_CTRL_LD;
+						B_timer_ctrl <= `REG_CTRL_CLR;
+					end
 					
 				end
 				
-				if (power_level_dec == 1'b1) begin
+				if (security_lock_data_output == 1'b0 && power_level_dec == 1'b1) begin
 					
-					if (selected_surface_data_output & 2'b01 && power_level_A_data_output > 4'd0)
+					if (selected_surface_data_output & 2'b01 && power_level_A_data_output > 4'd0) begin
 						power_level_A_ctrl <= `REG_CTRL_DEC;
+						if (power_level_A_data_output == 4'd1) begin
+							A_recently_on_data_input <= 1'b1;
+							A_recently_on_ctrl <= `REG_CTRL_LD;
+							A_timer_ctrl <= `REG_CTRL_CLR;
+						end
+					end
 						
-					if (selected_surface_data_output & 2'b10 && power_level_B_data_output > 4'd0)
+					if (selected_surface_data_output & 2'b10 && power_level_B_data_output > 4'd0) begin
 						power_level_B_ctrl <= `REG_CTRL_DEC;
+						if (power_level_B_data_output == 4'd1) begin
+							B_recently_on_data_input <= 1'b1;
+							B_recently_on_ctrl <= `REG_CTRL_LD;
+							B_timer_ctrl <= `REG_CTRL_CLR;
+						end
+					end
 					
 				end
 				
+				if (A_recently_on_data_output == 1'b1) begin
+					
+					if (A_timer_data_output == 10  * ONE_SECOND) begin
+						A_timer_ctrl <= `REG_CTRL_CLR;
+						A_recently_on_data_input <= 1'b0;
+						A_recently_on_ctrl <= `REG_CTRL_LD;
+					end else begin
+						A_timer_ctrl <= `REG_CTRL_INC;
+					end
+					
+				end
 				
+				if (B_recently_on_data_output == 1'b1) begin
+					
+					if (B_timer_data_output == 10  * ONE_SECOND) begin
+						B_timer_ctrl <= `REG_CTRL_CLR;
+						B_recently_on_data_input <= 1'b0;
+						B_recently_on_ctrl <= `REG_CTRL_LD;
+					end else begin
+						B_timer_ctrl <= `REG_CTRL_INC;
+					end
+					
+				end
+				
+				if (selected_surface_data_output == 2'b00 && power_level_A_data_output == 4'b0000 && power_level_B_data_output == 4'b0000) begin
+					if (security_lock_data_output == 1'b0 &&  three_seconds_push == 1'b1)
+						state_next <= STATE_SECOND_STEP_TO_LOCK;
+				end
+				
+				if (security_lock_data_output == 1'b1 && three_seconds_push == 1'b1) begin
+					state_next <= STATE_SECOND_STEP_TO_UNLOCK;
+				end
 				
 				if (power_toggle == 1'b1) begin
-					state_next <= STATE_POWER_OFF;
+					if (A_recently_on_data_output == 1'b0 && B_recently_on_data_output == 1'b0) begin
+						state_next <= STATE_POWER_OFF;
+					end else begin
+						timer_ctrl <= `REG_CTRL_CLR;
+						state_next <= STATE_10SEC_HH;
+					end
 				end
 				
-				power_level_7seg_output <= {selected_surface_data_output & 2'b10 ? 1'b0 : 1'b1, encode(power_level_B_data_output), selected_surface_data_output & 2'b01 ? 1'b0 : 1'b1, encode(power_level_A_data_output)};
+				if (security_lock_data_output <= 1'b1) begin
+					power_level_7seg_output <= 16'hC7C7;
+				end else begin
+					power_level_7seg_output <= {selected_surface_data_output & 2'b10 ? 1'b0 : 1'b1, encode(power_level_B_data_output), selected_surface_data_output & 2'b01 ? 1'b0 : 1'b1, encode(power_level_A_data_output)};
+				end
 				
 			end
+			
+			STATE_SECOND_STEP_TO_LOCK: begin
+			
+				if (power_level_inc == 1'b1) begin
+					security_lock_data_input <= 1'b1;
+					security_lock_ctrl <= `REG_CTRL_LD;
+					timer_ctrl <= `REG_CTRL_CLR;
+					state_next <= STATE_2SEC_LL;
+				end
+			
+			end
+			
+			STATE_2SEC_LL: begin
+			
+				if (timer_data_output == 2  * ONE_SECOND) begin
+					timer_ctrl <= `REG_CTRL_CLR;
+					state_next <= STATE_POWER_OFF;
+				end else begin
+					timer_ctrl <= `REG_CTRL_INC;
+				end
+				
+				power_level_7seg_output <= 16'hC7C7;
+			
+			end
+			
+			STATE_SECOND_STEP_TO_UNLOCK: begin
+			
+				if (power_level_dec == 1'b1) begin
+					security_lock_data_input <= 1'b0;
+					security_lock_ctrl <= `REG_CTRL_LD;
+					state_next <= STATE_POWER_ON;
+				end
+			
+			end
+			
+			STATE_10SEC_HH: begin
+				
+				if (timer_data_output == 10  * ONE_SECOND) begin
+					timer_ctrl <= `REG_CTRL_CLR;
+					A_timer_ctrl <= `REG_CTRL_CLR;
+					A_recently_on_ctrl <= `REG_CTRL_CLR;
+					B_timer_ctrl <= `REG_CTRL_CLR;
+					B_recently_on_ctrl <= `REG_CTRL_CLR;
+					state_next <= STATE_POWER_OFF;
+				end else begin
+					timer_ctrl <= `REG_CTRL_INC;
+				end
+				
+				power_level_7seg_output <= { B_recently_on_data_output == 1'b1 ? 8'h89 : 8'hFF, A_recently_on_data_output == 1'b1 ? 8'h89 : 8'hFF};
+			
+			end
+			
 		endcase
 		
 	end
