@@ -144,12 +144,6 @@ module stavka_e
 					temp_next <= rounded_buffer_reg[0] & rounded_buffer_reg[1] & rounded_buffer_reg[2];
 				end
 				
-				if (inc_red) begin
-					for (i = 0; i < 3; i = i + 1)
-						rounded_buffer_next[i] <= 4'h0;
-					state_next <= STATE_A;
-				end
-				
 				data_out <= temp_reg;
 
 			end
